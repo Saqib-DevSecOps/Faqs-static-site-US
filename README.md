@@ -1,0 +1,1 @@
+# Faqs-static-site-US
