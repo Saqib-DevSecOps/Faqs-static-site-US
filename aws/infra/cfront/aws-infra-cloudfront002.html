@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>an CloudFront be used to distribute a folder, or does it operate only at the bucket level?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">Can CloudFront be used to distribute a folder, or does it operate only at the bucket level?
+<em hidden="categorymeta">[AWS:  Infrastructure: CloudFront]</em>
+<ol type="a">
+  <li value="1">TL;DR - Amazon CloudFront can be       used to distribute content from Amazon S3. The Origin,       or the definitive source of the content CloudFront distributes CAN be from       an Amazon S3 Bucket OR from a folder       in an S3 Bucket.
+<div>
+  <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+    <tr>
+      <td><img src="images/infra/cfront/infracfron0001.png" width="703" height="417" alt=""></td>
+    </tr>
+  </table>
+</div></li>
+</ol>
+<ol type="a">
+  <li value="2">Background:</li>
+  <ol type="i">
+    <li value="1">A CloudFront        Origin is the source location of the content served via CloudFront. It is        either an Amazon S3 bucket or a custom origin such as EC2 or an        on-premises server</li>
+    <li>To make content available        via CloudFront, you would create a CloudFront        distribution,        which describes the what and how of making content available via        CloudFront.</li>
+    <li>In Amazon S3, unlike a        traditional file system, folders (or directories) do not exist        inherently. Files are not organized in hierarchies.</li>
+    <li>In Amazon S3, buckets and        objects are the primary resources, and objects are stored in buckets.</li>
+    <li>Unlike a traditional file        system, such as Amazon EFS, or Microsoft NTFS, Amazon S3 has a flat        structure instead of a hierarchy.</li>
+    <li>However, for the sake of        organizational simplicity, the Amazon S3 console supports the folder        concept as a means of grouping objects.</li>
+    <li>If the Origin is S3, a        CloudFront distribution will distribute any Object in the S3 Bucket, and        since a &quot;folder&quot; in S3 is simply a type of S3 Object, it will        be distributed.</li>
+  </ol>
+  <li><strong>References:</strong></li>
+<ol type="i">
+  <li value="1"><a href="https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-folders.html" target="new">Organizing objects</a> in the Amazon S3 console using folders</li>
+  <li><a href="https://aws.amazon.com/premiumsupport/knowledge-center/s3-prefix-nested-folders-difference/#Folders" target="new">Folders</a></li>
+  <li>Getting started with a        simple <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/GettingStarted.SimpleDistribution.html" target="new">CloudFront distribution</a></li>
+  <li>Amazon S3 Folders        Demystified (<a href="https://blog.skeddly.com/2020/09/amazon-s3-folders-demystified.html" target="new">skeddly.com</a>)</li>
+</ol>
+</ol>
+	  </li>
+</ol>
+</body>
+</html>

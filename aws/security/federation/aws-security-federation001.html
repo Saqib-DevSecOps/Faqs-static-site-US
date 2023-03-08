@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>What is Federated Access?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">What is Federated Access?
+<em hidden="categorymeta">[AWS: Security: Single Sign-On, Federation]</em>
+<ol type="a">
+  <li value="1">&quot;Federation is the       creation of a trust relationship between an external identity provider and       AWS. Users can sign in to a web identity provider, such as Login with       Amazon, Facebook, Google, or any IdP (or Identity Provider) that is       compatible with OpenID Connect (OIDC). Users can also sign in to an       enterprise identity system that is compatible with Security Assertion       Markup Language (SAML) 2.0, such as Microsoft Active Directory Federation       Services. When you use OIDC and SAML 2.0 to configure a trust relationship       between these external identity providers and AWS, the user is assigned to       an IAM role. The user also receives temporary credentials that allow the       user to access your AWS resources.&quot;</li>
+  <li>&quot;Identity federation is       a system of trust between two parties for the purpose of authenticating       users and conveying information needed to authorize their access to       resources. In this system, an identity provider (IdP) is responsible for       user authentication, and a service provider (SP), such as a service or an       application, controls access to resources. By administrative agreement and       configuration, the SP trusts the IdP to authenticate users and relies on       the information provided by the IdP about them. After authenticating a       user, the IdP sends the SP a message, called an assertion, containing the       user's sign-in name and other attributes that the SP needs to establish a       session with the user and to determine the scope of resource access that       the SP should grant. Federation is a common approach to building access       control systems which manage users centrally within a central IdP and       govern their access to multiple applications and services acting as       SPs.&quot;</li>
+  <li>&quot;Instead of creating an       IAM user, you can use existing identities from AWS Directory Service, your       enterprise user directory, or a web identity provider. These are known as       federated users. AWS assigns a role to a federated user when access is       requested through an identity provider.&quot;</li>
+  <li>A single control point for       authentication?? It is &quot;a method of linking a user&rsquo;s identity across       multiple separate identity management systems&quot;</li>
+  <li>A system that &quot;enables       users to use a single authentication ticket/token to obtain access across       all the networks of the different IT systems.&quot; &quot;It is all about       assigning the task of authentication to an external identity       provider.&quot;</li>
+  <li>&quot;The creation of a trust       relationship between an external identity provider and AWS. Users can sign       in to a web identity provider, such as Login with Amazon, Facebook,       Google, or any IdP that is compatible with OpenID Connect (OIDC). Users       can also sign in to an enterprise identity system that is compatible with       Security Assertion Markup Language (SAML) 2.0, such as Microsoft Active       Directory Federation Services. When you use OIDC and SAML 2.0 to configure       a trust relationship between these external identity providers and AWS,       the user is assigned to an IAM role. The user also receives temporary       credentials that allow the user to access your AWS resources. &quot; --<a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html</a><br>
+    &nbsp;</li>
+
+<div>
+  <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+    <tr>
+      <td><img src="images/security/federation/securityfederation0001.png" width="856" height="476" alt="">
+        <p>Image: <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_saml.html">https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_providers_saml.html</a></p></td>
+    </tr>
+  </table>
+</div></ol>
+<ol type="a">
+  <li value="7">Also</li>
+  <ol type="i">
+    <li value="1">Federated Login</li>
+    <li>Federated Access</li>
+    <li>Identity Federation</li>
+  </ol>
+  <li>&quot;Identity       federation is a       system of trust between two parties for the purpose of authenticating       users and conveying information needed to authorize their access to       resources.&quot;</li>
+  <li>&ldquo;Federation means linking       identity and access systems together such that one system trusts the       identities coming out of the other.&rdquo; </li>
+  <li>Start with concepts:</li>
+  <ol type="i">
+    <li value="1">Federated        Identity Management (FIM) is a &quot;set of agreements and standards that help        enterprises and applications share user identities.&quot; It is &quot;an        arrangement that can be made among multiple organizations so that        subscribers can use the same identifiers to access various applications.        In short, it&rsquo;s what allows you to sign into Spotify with your Facebook        account details.&quot;</li>
+    <li>&quot; Single Sign        On (SSO) is a        function that allows users to access multiple web applications at once,        using just one set of credentials.&quot;</li>
+    <ol type="1">
+      <li value="1">SSO fits within         the broader model of Federated Identity Management.</li>
+      <li>&quot;While SSO is designed         to authenticate a single credential across various systems within one         organization, FIM systems offer single access to a number of         applications across various enterprises.&quot;</li>
+    </ol>
+    <li>Identity Provider (IdP) -        the system that does the user authentication. &quot;Identity Provider is        responsible for user authentication.&quot;</li>
+    <li>Service Provider (SP) - the        system or application that consumes the result of the authentication.        &quot;A Service Provider (SP), such as a service or an application,        controls access to resources.&quot;</li>
+    <li>Assertion - &quot;The        message that is sent between the systems is called an assertion.&quot;        &quot;The assertion contains the account name of the user along with        other attributes that the SP needs to create a user session.&quot;</li>
+    <li>FIM technologies include:</li>
+    <ol type="1">
+      <li value="1">Security         Assertion Markup Language (SAML) 2.0</li>
+      <li>OAuth 2.0</li>
+      <li>OpenID</li>
+      <li>JSON Web Token (JWT)</li>
+      <li>SAML Assertions</li>
+    </ol>
+  </ol>
+  <li>In federated access or       federated identity management, a user's credential information is       centralized. A user goes to a single system (IdP) to login. The IdP       asserts that user's identity to the application (SP). This creates a       single control point for authentication.&quot;si</li>
+  <li>&quot;By administrative       agreement and configuration, the SP trusts the IdP to authenticate users       and relies on the information provided by the IdP about them.&quot;</li>
+  <ol type="i">
+    <li value="1">&quot;After        authenticating a user, the IdP sends the SP a message, called an        assertion, containing the user's sign-in name and other attributes that        the SP needs to establish a session with the user and to determine the        scope of resource access that the SP should grant.&quot;</li>
+  </ol>
+  <li><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1"><a href="https://aws.amazon.com/identity/federation/">Identity federation</a> in AWS</li>
+    <li>IAM Roles <a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_terms-and-concepts.html" target="new">terms and concepts</a></li>
+    <li>SAML: What's Behind SSO (<a href="https://developer.okta.com/blog/2019/07/30/saml-whats-behind-sso" target="new">okta.com</a>)</li>
+    <li>Federated Identity        Management vs. Single Sign-On (<a href="https://www.okta.com/identity-101/federated-identity-vs-sso/" target="new">okta.com</a>)</li>
+    <li>What Does Federated Login        Mean? (<a href="https://carvesystems.com/news/what-does-federated-login-mean-a-simple-detailed-answer/" target="new">carvesystems.com</a>)</li>
+    <li>(Internal)        Using <a href="https://w.amazon.com/index.php/AWS%20IT%20Security/Isengard/FAQ#Using_Isengard" target="new">Isengard        FAQs</a></li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

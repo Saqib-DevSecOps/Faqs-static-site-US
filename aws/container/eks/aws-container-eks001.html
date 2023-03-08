@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Does AWS have support for cross Public Cloud integration ? like Red Hat OpenShift?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">Does AWS have support for cross Public Cloud integratio ? like Red Hat OpenShift?
+<em hidden="categorymeta">[AWS: Container:  Amazon Elastic Kubernetes Service]</em>
+<ol type="a">
+  <li value="1">TL;DR</li>
+  <ol type="i">
+    <li value="1">Take a look at        Amazon Elastic Kubernetes Service (Amazon EKS) and Amazon Elastic        Container Service (Amazon ECS), and more specifically, EKS Anywhere and        ECS Anywhere.</li>
+    <li>They enable AWS customers to        create and operate Kubernetes clusters in a non-AWS environment,        providing functionality similar to that of RedHat OpenShift on AWS (ROSA)</li>
+  </ol>
+  <li>RedHat OpenShift Container       Platform is a Container Orchestration service from RedHat</li>
+  <ol type="i">
+    <li value="1">It is supported        on AWS</li>
+    <li>It is a cloud-based        container platform that leverages the Kubernetes technology.</li>
+    <li>It makes it easy to scale a        container architecture to thousands of nodes serving millions of clients.</li>
+  </ol>
+  <li>&quot;Kubernetes is open       source software for automating deployment, scaling, and management of       containerized applications.&quot;</li>
+  <ol type="i">
+    <li value="1">It deploys and        manages containerized applications at scale.</li>
+    <li>&quot;Kubernetes arranges        containers into logical groupings for management and discoverability, and        in AWS, launches them onto clusters of Amazon Elastic Compute Cloud        (Amazon EC2) instances.&quot;</li>
+    <li>&quot;Using Kubernetes, you        can run containerized applications including microservices, batch        processing workers, and platforms as a service (PaaS) using the same        toolset on premises and in the cloud.&quot;</li>
+    <li>Kubernetes comes with native        features such as: Autoscaling, Load balancing, DNS management, etc. that        make it capable of handling complex architecture requirements without        needing to bring in external services. However, Kubernetes is known to be        complex to setup and manage.</li>
+    <li>Kubernetes is inherently        vendor/platform agnostic. Making it a convenient technology for        implementing hybrid and multi-cloud strategies.</li>
+  </ol>
+  <li>AWS' Container Orchestration       services can be deployed in a hybrid cloud or multi-cloud architecture</li>
+  <li>Amazon Elastic Kubernetes       Service (Amazon EKS) is a managed service that makes it easy to run       Kubernetes on AWS without installing and operating your own Kubernetes       control plane or worker nodes.</li>
+  <ol type="i">
+    <li value="1">Amazon EKS        enables customers to use Kubernetes without the undifferentiated        heavy-lifting of self-managing the entire infrastructure.</li>
+    <li>EKS provides a fully-managed        Kubernetes control plane. It performs Container Orchestration by managing        and distributing Containers across a cluster of nodes (EC2 Instances) on        AWS</li>
+    <li>Other similar services on        AWS include Amazon Elastic Container Service (Amazon ECS) and Red Hat        OpenShift on AWS (ROSA)</li>
+  </ol>
+  <li>As of 2021, Amazon EKS Anywhere, a deployment option for Amazon EKS that enables       you to easily create and operate Kubernetes clusters in a non-AWS       environment.</li>
+  <ol type="i">
+    <li value="1">&quot;Amazon EKS        Anywhere makes it possible for users to extend the container        infrastructure outside the AWS cloud environment.&quot;</li>
+    <li>Amazon EKS Anywhere provides        a management layer and automation tooling, enabling an easier cluster        operation, lifecycle management, observability, backups and policy        management.</li>
+    <li>Unlike Amazon EKS with a control plane managed by AWS, since Amazon EKS Anywhere runs on-premises, the control plane of Kubernetes is expected to be managed by the customer.</li>
+    <li>&quot;In addition, you can        leverage the EKS console to view all of your Kubernetes clusters        (including EKS Anywhere clusters) running anywhere, through the EKS        Connector.&quot;</li>
+  </ol>
+  <li>EKS Distro is the same       Kubernetes distribution used in AWS. It provides a standard, secure, and       community supported version of Kubernetes. It is fully compatible with any       open source cluster management tooling.</li>
+</ol>
+<ol type="a">
+  <li value="8"><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">AWS <a href="https://aws.amazon.com/containers/" target="new">Containers        services</a></li>
+    <li>What is container        orchestration? (<a href="https://www.redhat.com/en/topics/containers/what-is-container-orchestration" target="new">redhat.com</a>)</li>
+    <li>OpenShift Container Platform        overview (<a href="https://docs.openshift.com/container-platform/4.10/getting_started/openshift-overview.html" target="new">openshift.com</a>)</li>
+    <li>Red Hat <a href="https://aws.amazon.com/quickstart/architecture/openshift/" target="new">OpenShift on AWS</a></li>
+    <li>Quick Start <a href="https://aws-quickstart.s3.amazonaws.com/quickstart-redhat-openshift/doc/red-hat-openshift-on-the-aws-cloud.pdf" target="new">Reference Deployment</a> for OpenShift</li>
+    <li><a href="https://aws.amazon.com/blogs/aws/amazon-eks-anywhere-now-generally-available-to-create-and-manage-kubernetes-clusters-on-premises/" target="new">Amazon EKS Anywhere</a> – Now Generally Available        to Create and Manage Kubernetes Clusters on Premises</li>
+    <li>EKS Anywhere and ECS        Anywhere Multi-cloud Services (<a href="https://cloud.netapp.com/blog/cvo-blg-eks-anywhere-and-ecs-anywhere-multicloud-services" target="new">netapp.com</a>)</li>
+    <li>Who Does or Doesn&rsquo;t Need <a href="https://www.itprotoday.com/hybrid-cloud/who-does-or-doesn-t-need-eks-anywhere" target="new">EKS Anywhere</a>?</li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

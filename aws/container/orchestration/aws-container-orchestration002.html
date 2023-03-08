@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>When should I use Amazon ECS or Amazon EKS without AWS Fargate?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">When should I use Amazon ECS or Amazon EKS without AWS Fargate?</li>
+	<em hidden="categorymeta">[AWS: Container: Orchestration]</em>
+  <ol type="a">
+    <li value="1">When you want more control</li>
+  </ol>
+  <ol type="a">
+    <li value="2"><strong>Background</strong></li>
+    <ol type="i">
+      <li value="1">AWS Fargate is a         serverless compute engine for containers. It works with both Amazon         Elastic Container Service (ECS) and Amazon Elastic Kubernetes Service         (EKS).</li>
+      <li>Fargate eliminates the need         to provision, patch, or manage cluster capacity for containerization.         Making it easy to focus on building your applications</li>
+      <li>With Fargate, you don't pay         for idle compute capacity.</li>
+      <ol type="1">
+        <li value="1">Pricing is          based on requested vCPU, memory, Operating Systems, CPU Architecture,          and storage resources</li>
+        <li>Fargate has the advantage          of allowing you to pay only for the capacity (vCPU, memory, and          storage) consumed by your containerized applications</li>
+      </ol>
+    </ol>
+    <li><strong>Answer</strong></li>
+    <ol type="i">
+      <li value="1">Use ECS or EKS         without Fargate, if you need greater control, e.g. in terms of         configurations and broader customization options, </li>
+      <ol type="1">
+        <li value="1">Fargate does          not support the full set of vCPU and Memory options available with          Amazon ECS and Amazon EKS.<br>
+          With Fargate you choose from a supported configuration of vCPU          options and a corresponding list of memory amounts. See <a href="https://aws.amazon.com/fargate/pricing/#Supported_Configurations" target="new">Supported Configurations</a></li>
+        <li>Also, GPUs are not          currently supported on Fargate. Use Fargate for workloads that run on          CPUs</li>
+      </ol>
+    </ol>
+  </ol>
+  <ol type="a">
+    <li value="4"><strong>References:</strong></li>
+    <ol type="i">
+      <li value="1">AWS Fargate <a href="https://aws.amazon.com/fargate/faqs/" target="new">FAQs</a></li>
+      <li>AWS Fargate <a href="https://aws.amazon.com/fargate/pricing/" target="new">Pricing</a></li>
+      <li>AWS Fargate <a href="https://aws.amazon.com/fargate/pricing/#Supported_Configurations" target="new">Supported Configurations</a></li>
+    </ol>
+  </ol>
+</ol>
+</body>
+</html>

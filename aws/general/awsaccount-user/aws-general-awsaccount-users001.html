@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>What are the different user accounts in AWS?</title>
+</head>
+
+<body>
+<ol style="list-style-type:none">
+  <li value="1">What are the different user accounts in AWS?
+<em hidden="categorymeta">[AWS: General: AWS Account, Users]</em>
+<ol type="a">
+  <li value="1">The <strong><em>root user</em></strong> (also called <strong><em>account owner</em></strong> or <strong><em>account root user</em></strong>), is the default user that comes with an AWS account. It has full, unrestricted privileges in the AWS account. As such, it should not be used for day-to-day tasks.</li>
+  <ol type="i">
+    <li value="1">The root user is created when the AWS account is created</li>
+    <li>The credentials of the account owner allow <strong><em>full access</em></strong> to all resources in the account</li>
+    <li>The root user can sign in to the AWS Management Console using an <strong><em>email address</em></strong> and <strong><em>password</em></strong></li>
+  </ol>
+  <li>The <strong><em>IAM user</em></strong> is a <strong><em>user account</em></strong> created by the root user. IAM users can be assigned privileges/permissions.</li>
+  <ol type="i">
+    <li value="1">IAM users are created by the root user or a privileged IAM user.</li>
+    <li>The IAM user can sign in to the AWS Management Console using the account alias or 12-digit AWS account ID, the IAM user name, and the IAM user's password</li>
+  </ol>
+  <li>By default, a new IAM user has no privileges. However it can be assigned privileges. An IAM user granted administrator privileges is referred to as an <strong><em>IAM administrator</em></strong>.</li>
+  <li>For <strong><em>day-to-day administrative tasks</em></strong>, create one or more IAM users and assign them appropriate privileges. For example, you can create an IAM user with appropriate privileges to manage Network Access Control Lists, instead of using the root user.</li>
+</ol>
+<ol type="a">
+  <li value="5"><strong>References</strong></li>
+  <ol type="i">
+    <li value="1"><a href="https://docs.aws.amazon.com/IAM/latest/UserGuide/console.html" target="new">Signing in to the AWS Management Console</a> as an IAM user or root user</li>
+    <li>AWS account <a href="https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html" target="new">root user credentials and IAM user credentials</a></li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Can you apply a Service Control Policy (SCP) at an individual member account level?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">Can you apply a Service Control Policy (SCP) at an individual member account level?
+<em hidden="categorymeta">[AWS: Management:  AWS Organizations, Policy]</em>
+<ol type="a">
+  <li value="1">Yes.</li>
+  <li>An SCP can be       applied to the Root, OU or individual account.</li>
+  <li>An SCP applies at       the entity and below.</li>
+  <ol type="i">
+    <li value="1">When        you attach a policy to the organization root, all OUs and accounts in the        organization inherit that policy.</li>
+    <li>When you attach        a policy to a specific OU, accounts that are directly under that OU or        any child OU inherit the policy.</li>
+    <li>When you attach        a policy to a specific account, it affects only that account.</li>
+  </ol>
+  <li>Note: While it's       attaching an SCP to a member account is allowed, carefully consider the       use-case. It might be better to create an appropriate Organizational Unit       (OU) for the account, and apply the SCP to the OU.</li>
+  <li><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">Understanding <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_inheritance.html" target="new">policy inheritance</a></li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

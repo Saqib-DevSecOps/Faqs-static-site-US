@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>What are the types of AWS Regions?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">What are the types of AWS Regions?
+<em hidden="categorymeta">AWS: Infrastructure: AWS Regions]</em>
+<ol type="a">
+  <li value="1">Note: There are currently five types of AWS Regions, described as AWS Partitions:</li>
+  <li>AWS Commercial Regions</li>
+  <ol type="i">
+    <li value="1">Also known as the Standard Regions, e.g. N. Virginia (us-east-1)</li>
+    <li>There are currently 26 AWS Regions (listed in order of introduction, from 2006 to 2022):</li>
+    <ol type="1">
+      <li value="1">US-East-1 (North Virginia)</li>
+      <li>EU-West-1 (Ireland)</li>
+      <li>US-West-1(Northern California)</li>
+      <li>AP-Southeast-1 (Singapore)</li>
+      <li>AP-Northeast-1 (Tokyo)</li>
+      <li>US-West-2 (Oregon)</li>
+      <li>SA-East-1 (Sao Paulo)</li>
+      <li>US-Gov-West-1 (GovCloud         West)</li>
+      <li>AP-Southeast-2 (Sydney)</li>
+      <li>CN-North-1 (Beijing)</li>
+      <li>EU-Central-1 (Frankfurt)</li>
+      <li>AP-Northeast-2 (Seoul)</li>
+      <li>AP-South-1 (Mumbai)</li>
+      <li>US-East-2 (Ohio)</li>
+      <li>CA-Central-1 (Canada)</li>
+      <li>EU-West-2 (London)</li>
+      <li>EU-West-3 (Paris)</li>
+      <li>CN-Northwest-1 (Ningxia)</li>
+      <li>EU-North-1 (Stockholm)</li>
+      <li>US-Gov-East-1 (GovCloud         East)</li>
+      <li>ME-South-1 (Bahrain)</li>
+      <li>AP-East-1 (Hong Kong)</li>
+      <li>AF-South-1 (Cape Town)</li>
+      <li>EU-South-1 (Milan)</li>
+      <li>AP-Northeast-3 (Osaka)</li>
+      <li>AP-Southeast-3 (Jakarta)</li>
+    </ol>
+    <li>Specific types of AWS Regions are grouped into AWS Partitions. For standard AWS Regions, the partition is aws. For resources in other partitions, the partition naming convention is aws-partitionname. E.g. aws-cn for China (Beijing and Ningxia) Regions, and aws-us-gov for resources in the AWS GovCloud Regions</li>
+  </ol>
+  <ol type="i">
+    <li value="4"><strong>References:</strong></li>
+    <ol type="1">
+      <li value="1">AWS::<a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html#cfn-pseudo-param-partition" target="new">Partition</a></li>
+    </ol>
+  </ol>
+  <li>AWS China Region</li>
+  <ol type="i">
+    <li value="1">There are two Regions in China:</li>
+    <ol type="1">
+      <li value="1">AWS China (Beijing) Region</li>
+      <ol type="a">
+        <li value="1">based out of Beijing and adjacent area</li>
+        <li>managed by service provider Beijing Sinnet Technology Co., Ltd. (Sinnet). </li>
+        <li>Region code: cn-north-1.</li>
+      </ol>
+      <li>AWS China (Ningxia) Region</li>
+      <ol type="a">
+        <li value="1">based out of Ningxia</li>
+        <li>managed by service provider Ningxia Western Cloud Data Technology Co., Ltd. (NWCD)</li>
+        <li>Region code: cn-northwest-1.</li>
+      </ol>
+    </ol>
+    <li>These are the AWS-cn partitions</li>
+  </ol>
+  <ol type="i">
+    <li value="3">Note: AWS provides a full, and robust complement of Services in the China Regions, however there are some notable differences from the rest of the AWS commercial Regions to be aware of, including:</li>
+    <ol type="1">
+      <li value="1">No direct connection to the AWS backbone</li>
+      <li>Management: &quot;AWS has collaborated with local partners in China who have proper telecom licenses for delivering cloud services within the AWS China (Beijing) Region and the AWS China (Ningxia) Region.&quot;</li>
+      <li>Trademark restriction on &quot;AWS&quot;. The Beijing Municipal People's Court ruled that the &quot;AWS&quot; trademark belongs to a local firm, ActionSoft Science &amp; Technology Development Co.</li>
+    </ol>
+  </ol>
+  <ol type="i">
+    <li value="4">&quot;Customers who wish to use the China Regions are required to sign up for a separate set of account credentials unique to China services.&quot;</li>
+    <li>&quot;Only China-based and multinational companies with customers in China can apply for an account.&quot;</li>
+  </ol>
+  <ol type="i">
+    <li value="6"><strong>References:</strong></li>
+    <ol type="1">
+      <li value="1">Getting Started with <a href="https://aws.amazon.com/blogs/enterprise-strategy/getting-started-with-aws-services-in-aws-china-beijing-region-and-aws-china-ningxia-region/" target="new">AWS Services in AWS China</a> (Beijing) Region and AWS China (Ningxia) Region</li>
+      <li>AWS <a href="https://aws.amazon.com/about-aws/global-infrastructure/regional-product-services/?p=ngi&loc=4#AWS_China_Regions*" target="new">China Regions</a></li>
+      <li>AWS::<a href="https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html#cfn-pseudo-param-partition" target="new">Partition</a></li>
+      <li>AWS China: <a href="https://www.globallogic.com/insights/blogs/aws-china-beyond-the-firewall/">Beyond the Firewall</a></li>
+      <li>Amazon lost <a href="https://www.lexology.com/library/detail.aspx?g=afb04acc-2b48-48fb-bf0d-3a01830a5dba" target="new">AWS smiley shaped trademark</a> in China against ActionSoft</li>
+    </ol>
+  </ol>
+  <li>AWS GovCloud US</li>
+  <ol type="i">
+    <li value="1">AWS GovCloud is a secured AWS region built for United States government agencies and companies that work with and support them.</li>
+    <li>AWS GovCloud is for US-based public sector customers, government agencies and its contractors </li>
+    <li>AWS GovCloud operates alongside the Top Secret and Secret Regions that support the intelligence community and other agencies who store classified information.</li>
+    <li>&quot;Access to the GovCloud region is restricted to a vetted set of USA-based individuals. Its servers are situated on United States soil, and it is managed and run only by United States citizens.&quot;</li>
+    <li>There are two Regions in US Government Cloud, e.g. GovCloud West, us-gov-west-1, and GovCloud East, us-gov-east-1</li>
+    <li>Have partition name AWS-us-gov.</li>
+  </ol>
+  <ol type="i">
+    <li value="7"><strong>References:</strong></li>
+    <ol type="1">
+      <li value="1">AWS GovCloud Services: <a href="https://cloud.netapp.com/blog/aws-cvo-blg-aws-govcloud-services-sensitive-data-on-the-public-cloud" target="new">Sensitive and Classified Data on the Public Cloud</a></li>
+    </ol>
+  </ol>
+  <li>AWS Top Secret Region</li>
+  <ol type="i">
+    <li value="1">The AWS Top Secret Region launched in 2014 as the first air-gapped commercial cloud for the U.S. Intelligence Community</li>
+    <li>&quot;The Top Secret region is intended for the exclusive use of 18 government agencies comprising the USA <a href="https://www.dni.gov/index.php/what-we-do/members-of-the-ic" target="new">intelligence community</a>.&quot;</li>
+    <li>&quot;The CIA and AWS have partnered to create additional security overlays in addition to the air gap and three geographically dispersed zones of availability.&quot; </li>
+    <li>&quot;The Top Secret Region is hosted on-premise at the CIA, and is air gapped, completely separated from the public Internet for extra security.&quot;</li>
+    <li>The top secret government data centers, e.g. US-ISOB-East-1</li>
+    <li>Are part of the AWS-iso-b partition</li>
+  </ol>
+  <ol type="i">
+    <li value="7"><strong>References:</strong></li>
+    <ol type="1">
+      <li value="1">AWS GovCloud Services: <a href="https://cloud.netapp.com/blog/aws-cvo-blg-aws-govcloud-services-sensitive-data-on-the-public-cloud" target="new">Sensitive and Classified Data on the Public Cloud</a></li>
+      <li><a href="https://www.nextgov.com/it-modernization/2017/06/cias-cloud-pretty-close-invincible-cio-says/138679/" target="new">CIA's Cloud</a> is 'Pretty Close' to Invincible, CIO Says</li>
+    </ol>
+  </ol>
+  <li>AWS Secret Region</li>
+  <ol type="i">
+    <li value="1">The AWS Secret Region operates workloads up to the Secret U.S. security classification level.</li>
+    <li>&quot;The AWS Secret Region is used for sensitive, classified workloads by non-intelligence government organizations, and can be used by intelligence organizations to share data that is not top secret with other agencies.&quot;</li>
+    <li>The Secret Region is available to all government agencies, not just intelligence agencies</li>
+    <li>The AWS Secret Region addresses the full range of U.S. Department of Defense (DoD) data classifications, including Unclassified, Sensitive (CUI), Secret, and Top Secret. </li>
+    <li>The Secret and Top Secret Regions, each consists of three Availability Zones.</li>
+    <li>The secret government data centers, e.g. US-ISO-East-1</li>
+    <li>Are part of the AWS-iso partition</li>
+  </ol>
+  <ol type="i">
+    <li value="8"><strong>References:</strong></li>
+    <ol type="1">
+      <li value="1"><a href="https://www.senedia.org/wp-content/uploads/2019/07/AWS-Tech-Talk-SENEDIA19.pdf" target="new">AWS for DoD</a> (see slide 18)</li>
+      <li>Announcing the New <a href="https://aws.amazon.com/blogs/publicsector/announcing-the-new-aws-secret-region/" target="new">AWS Secret Region</a></li>
+      <li>AWS GovCloud Services: <a href="https://cloud.netapp.com/blog/aws-cvo-blg-aws-govcloud-services-sensitive-data-on-the-public-cloud" target="new">Sensitive and Classified Data on the Public Cloud</a></li>
+      <li>AWS <a href="https://aws.amazon.com/blogs/security/aws-secret-region-expands-to-include-11-new-services/" target="new">Secret Region</a> expands to include 11 new services</li>
+    </ol>
+  </ol>
+</ol>
+<ol type="a">
+  <li value="7"><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">Latest AWS Regions (<a href="https://github.com/jsonmaur/aws-regions" target="new">GitHub</a>)</li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

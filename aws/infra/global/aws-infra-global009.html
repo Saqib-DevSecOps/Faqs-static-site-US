@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>If a client in Durban, South Africa needs access to a service that is not available in the Cape Town Region, can they just re-route them to another Region where that service does exist?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">If a client in Durban, South Africa needs access to a service that is not available in the Cape Town Region, can they just re-route them to another Region where that service does exist?
+	  <em hidden="categorymeta">[AWS: Infrastructure: AWS Region, Services]</em></li>
+  <ol type="a">
+    <li value="1">There are a        variety of reasons to pick an AWS Region, including:</li>
+    <ol type="i">
+      <li value="1">cost of services</li>
+      <li>proximity to end-users</li>
+      <li>regulatory compliance</li>
+      <li>availability of services</li>
+    </ol>
+    <li>If a required service is not        available in a preferred Region, choose the next best region that has the        required service, based on your criteria, and provision the service.</li>
+    <li>Then direct your users to        use the requisite method to access that service</li>
+    <li><strong>Note:</strong> If the service you want to        make available is content, e.g. web files, PDF, movies, you may consider        Amazon CloudFront. Use CloudFront to copy the content from the Origin,        and position, or cache it in Edge Locations closer to the client, even if        the Origin is in a remote Region.</li>
+  </ol>
+</ol>
+</body>
+</html>

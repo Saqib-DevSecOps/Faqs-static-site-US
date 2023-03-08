@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>What is an AWS Organizations Service Control Policy (SCP)?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">What is an AWS Organizations Service Control Policy (SCP)?
+<em hidden="categorymeta">[AWS: Management: AWS Organizations,  Policy]</em>
+<ol type="a">
+  <li value="1">SCPs define the maximum       available permissions for IAM entities in        member accounts</li>
+  <ol type="i">
+    <li value="1">It defines the        &quot;outer boundaries&quot; of what can be done in an account</li>
+  </ol>
+  <li>SCPs attach at multiple       places in an AWS Organization: root, Organization Unital (OU), and       individual member accounts</li>
+  <ol type="i">
+    <li value="1">Effects of SCPs        apply at the level it's applied and down, e.g. at the root and down to        any OUs and member accounts.</li>
+    <li>When you apply a policy to        the root, it applies to every OU and account in the organization.</li>
+    <li>When you attach a policy to        an OU, it applies only to that OU and all its accounts</li>
+    <li>When you attach a policy to        an account, it affects only that account</li>
+  </ol>
+  <li><strong>Note:</strong> SCPs do not grant       permissions</li>
+  <li>&quot;You can configure the       service control policies (SCPs) in your organization to work as either of       the following:</li>
+  <ol type="i">
+    <li value="1">A <strong><em>deny list</em></strong> – actions are allowed by default, and you specify what services and        actions are prohibited. AWS Organizations attaches an AWS managed SCP        named <em>FullAWSAccess</em> to every root and OU when it's created. This policy        allows all services and actions. This is the default configuration of        SCPs in AWS Organizations. &quot;With a deny list strategy a default SCP        allows all services and deny lists must be implemented for any specific        services that must be restricted.&quot;</li>
+    <li>An <strong><em>allow list</em></strong> – actions are prohibited by default, and you explicitly specify what        services and actions are allowed. An allow list strategy has you remove        the default AWS managed policy (FullAWSAccess) and replace it with an SCP        that explicitly permits only those services and actions you want to        allow, otherwise all actions for all services are implicitly denied.</li>
+  </ol>
+  <li><strong>Note:</strong> &quot;SCPs are not available       in an organization in which only <strong><em>consolidated       billing</em></strong> is       enabled. For SCPs to be available, you must <strong><em>enable all       features</em></strong> in the       organization.&quot;</li>
+</ol>
+<ol type="a">
+  <li value="6"><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1"><a href="https://aws.amazon.com/blogs/security/how-to-use-service-control-policies-in-aws-organizations/" target="new">How to Use SCP</a> in AWS Organizations</li>
+    <li><a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_strategies.html" target="new">Strategies</a> for using SCPs</li>
+    <li>AWS Organizations <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html#allowlist_denylist" target="new">Allow vs Deny Lists</a></li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

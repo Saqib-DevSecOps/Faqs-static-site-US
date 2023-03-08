@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Can you automate Vertical Scaling on AWS?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">Can you automate Vertical Scaling on AWS?
+<em hidden="categorymeta">[AWS, Compute,  Auto Scaling]</em>
+<ol type="a">
+  <li value="1"><strong><em>Vertical Scaling</em></strong>, also known       as Scaling Up and Scaling Down, is the process of increasing (scaling up),       or decreasing (scaling down) the capacity of a single instance, or device. E.g. adding or removing memory or vCPU to a single EC2       Instance.</li>
+  <li>In AWS the capacities of an       EC2 Instance are pre-defined (at instance launch). Scaling up or down       capacity for EC2 Instances involves resizing to the next defined size, or       a different EC2 Instance, with the desired, pre-defined capacities.</li>
+  <li>The <strong><em>AWS Ops Automator solution</em></strong> is an AWS       Solutions Library product that now includes an extensive suite of actions that       you can use to automate the management of snapshots, instances, and vertical scaling.</li>
+  <li>&quot;The solution can resize       your instances by restarting your existing instance with a new size. Or, the       solution can resize your instances by replacing your       existing instance       with a new, resized instance.&quot;
+<div>
+  <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+    <tr>
+      <td><p><img src="images/compute/scaling/computescaling001.png" width="709" height="448" alt=""></p>
+        <p>Image: <a href="https://aws.amazon.com/blogs/architecture/aws-ops-automator-v2-features-vertical-scaling-preview/">https://aws.amazon.com/blogs/architecture/aws-ops-automator-v2-features-vertical-scaling-preview/</a></p></td>
+    </tr>
+  </table>
+</div></li>
+</ol>
+<ol type="a">
+  <li value="5">&quot;All you have to do is       define the time-based or event-based trigger that determines when the       solution scales your instances, and choose whether you want to change the       size of your existing instances or replace your instances with new,       resized instances. The time-based or event-based trigger invokes the AWS       Lambda to scale your instances.&quot;</li>
+  <li><strong>Notes:</strong></li>
+  <ol type="i">
+    <li value="1">&quot;The        solution is also integrated with Elastic Load Balancing to automatically        register the new instance with load Balancers.&quot;</li>
+    <li>As per the <a href="https://docs.aws.amazon.com/wellarchitected/latest/reliability-pillar/design-principles.html">Design Principle</a> of the Reliability Pillar        of the AWS Well-Architected Framework, horizontal        scaling is        recommended instead of vertical scaling: &quot;Scale horizontally        to increase aggregate workload availability.&quot;</li>
+  </ol>
+  <li><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">AWS <a href="https://aws.amazon.com/solutions/implementations/ops-automator/">Ops Automator</a></li>
+    <li>AWS Ops Automator <a href="https://aws.amazon.com/blogs/architecture/aws-ops-automator-v2-features-vertical-scaling-preview/">v2 features vertical scaling</a> (Preview)</li>
+    <li>AWS Vertical Scaling <a href="https://aws.amazon.com/blogs/architecture/tag/vertical-scaling/">blog posts</a></li>
+    <li>AWS Ops Automator <a href="https://docs.aws.amazon.com/solutions/latest/ops-automator/welcome.html">Implementation Guide</a></li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

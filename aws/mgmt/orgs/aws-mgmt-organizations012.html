@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Is an account root user required to setup AWS Organizations?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">Is an account root user required to setup AWS Organizations?
+<em hidden="categorymeta">[AWS: Management: AWS Organizations, Accounts]</em>
+<ol type="a">
+  <li value="1">Account Root is not required</li>
+  <li>You can use the Account Root       User to setup AWS Organizations, however it is not required and more       importantly, it is NOT recommended </li>
+  <li>An IAM user with appropriate       administrator privileges is recommended</li>
+  <li>To create an organization in       AWS Organizations with an IAM user, it must have at a minimum the       following privileges:</li>
+  <ol type="i">
+    <li value="1">organizations:CreateOrganization</li>
+    <li>iam:CreateServiceLinkedRole</li>
+  </ol>
+</ol>
+<ol type="a">
+  <li value="5"><strong>References</strong></li>
+  <ol type="i">
+    <li value="1"><a href="https://docs.aws.amazon.com/controltower/latest/userguide/setting-up.html" target="new">Setting up</a></li>
+    <li><a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_org_create.html" target="new">Create an organization</a></li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

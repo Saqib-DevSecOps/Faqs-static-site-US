@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>What tasks require the credentials of the AWS Account Root User?</title>
+</head>
+
+<body>
+<ol style="list-style-type:none">
+  <li value="1">What tasks require the credentials of the AWS Account Root User?
+<em hidden="categorymeta">[AWS: General: AWS Account, Permissions]</em>
+<ol type="a">
+  <li value="1">Most tasks can be carried out in an AWS Account using an IAM User with appropriate privileges.</li>
+  <li>There are very few tasks that require the Account Root User, and they include:</li>
+  <ol type="i">
+    <li value="1">Closing the account</li>
+    <li>Configuring MFA Delete on an Amazon S3 bucket</li>
+    <li>Changing or canceling AWS Support Plan</li>
+  </ol>
+  <li>Note: If the AWS Account is a Member Account in an AWS Organizations service, the Root User of the Member Account might be restricted using a Service Control Policy (SCP), from carrying out one or more of the tasks that only the Root User can do.</li>
+  <ol type="i">
+    <li value="1">For an example see this ACloudGuru walk-through <a href="https://learn.acloud.guru/course/how-to-organize-your-accounts-in-aws/learn/2e4b11a5-288d-484e-9613-bf3eed6dcbd2/34869913-7bfd-4ed7-b802-0918c88cc0e6/watch" target="new">demo</a>. (Starting at 04:20)</li>
+  </ol>
+</ol>
+<ol type="a">
+  <li value="4"><strong>References</strong></li>
+  <ol type="i">
+    <li value="1"><a href="https://docs.aws.amazon.com/general/latest/gr/root-vs-iam.html#aws_tasks-that-require-root">Tasks that require root user credentials</a>.</li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

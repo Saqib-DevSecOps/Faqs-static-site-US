@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>What is an AWS Account?</title>
+</head>
+
+<body>
+<ol style="list-style-type:none">
+  <li value="1">What is an AWS Account?
+<em hidden="categorymeta">[AWS: General: AWS Account, General]</em>
+<ol type="a">
+  <li value="1">AWS accounts are a fundamental part of accessing AWS services. You can think of an AWS account in three basic ways. As a:</li>
+  <ol type="i">
+    <li value="1">Container</li>
+    <ol type="1">
+      <li value="1">Think of your AWS account as a container for all your AWS resources (Elastic Compute Cloud, S3 bucket, IAM user, etc.), and the AWS identities that can access those resources</li>
+      <li>It contains</li>
+      <ol type="a">
+        <li value="1">a set of AWS resources enabled in the account</li>
+        <li>a set of users including the Account <em>Root user</em> and zero or more <em><strong>IAM users</strong></em></li>
+        <ol type="i">
+          <li value="1">the <strong><em>Root user</em></strong> comes pre-created with the AWS Account</li>
+          <li>The root user can <em><strong>optionally create one or more IAM users</strong></em></li>
+        </ol>
+        <li>settings used to configure the account and its resources</li>
+      </ol>
+      <li>Note: Every resource is uniquely identified by an Amazon Resource Name (ARN) that includes the account ID of the account that contains, or owns it</li>
+    </ol>
+    <li>Security boundary</li>
+    <ol type="1">
+      <li value="1">AWS accounts serve as the fundamental security boundary for your AWS resources. Enabling a level of isolation and access control.</li>
+      <li>Resources that you create in your account are available to users who have credentials for your account.</li>
+    </ol>
+    <li>User or set of users</li>
+    <ol type="1">
+      <li value="1">There are two general user types in AWS:</li>
+      <ol type="a">
+        <li value="1">AWS Account Root User</li>
+        <li>Amazon IAM User</li>
+      </ol>
+      <li>When you sign-up for AWS service, you are provisioned an AWS account, and that comes with an AWS account root user</li>
+      <li>Every AWS account, i.e. the Container, can have one AWS Account Root User, and zero or more IAM Users</li>
+      <li>To access the AWS Account for the first time, login using provided AWS account root user identity</li>
+      <li>Optionally create one or more IAM users</li>
+    </ol>
+  </ol>
+  <li><strong>References</strong>:</li>
+  <ol type="i">
+    <li value="1">Welcome to the AWS <a href="https://docs.aws.amazon.com/accounts/latest/reference/accounts-welcome.html" target="new">Account Management Reference Guide</a></li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

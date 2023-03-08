@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>What is the hierarchy in AWS Organizations: Ex: Org &gt; Root &gt; Management Account &gt; Member Accounts &gt; Org Unit.</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">What is the hierarchy in AWS Organizations: Ex: Org &gt; Root &gt; Management Account &gt; Member Accounts &gt; Org Unit.
+<em hidden="categorymeta">[AWS: Management: AWS Organizations,  Hierarchy]</em>
+<ol type="a">
+  <li value="1">The basic structure or       hierarchy of AWS Organizations includes the following components, listed       in a top down order:</li>
+  <ol type="i">
+    <li value="1">Organization        - This is        the central entity that consolidates the accounts,        policies and other resources. An organization has one management account along with zero or more        member accounts.</li>
+    <li>Administrative        Root - The        administrative root is the top-most container in your organization&rsquo;s        hierarchy. It is the starting point for organizing the AWS accounts. It        is a container for accounts, policies and other resources. You can create        Organizational Units (OUs), and nested OUs under the administrative root        to logically group your accounts and a hierarchy that best matches your        business needs.  You can apply a        service control policy (SCP) at the administrative        root.</li>
+    <li>Organizational        unit (OU) - A container (or        sub-container) for accounts within a root. You can create an OU        hierarchy by having nested OUs. Policies attached at any point in the        organization flow down and affect all OUs, nested OUs and member ccounts.</li>
+    <li>Management        Account - This        is a standard AWS Root Account used to create the        Organization service. It has responsibilities, such as owning all        resources and acting as the payer account, responsible for paying all        charges accrued by the member accounts.</li>
+    <li>Member        Account - This        is a standard AWS Root Account, invited (or created) into the        Organization by the management account. These are the accounts owned by        the various teams and business units with the company.</li>
+
+<div>
+  <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+    <tr>
+      <td><img src="images/mgmt/orgs/mgmtorgs0001.png" width="666" height="356" alt=""></td>
+    </tr>
+  </table>
+</div>
+	  
+	    </ol>
+
+<ol type="i">
+  <li value="6">Service control policies (SCPs)  are one of the       policies that be applied within the Organization. They are similar to AWS       Identity and Access Management (IAM) permission policies and use almost       the same syntax.<br>
+    However, an SCP never grants permissions. SCPs are JSON policies that       specify the maximum permissions that users and roles can exercise within       the Organization.<br>
+    They limits what member accounts can do.</li>
+</ol></ol>
+<ol type="a">
+  <li value="2"><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">AWS Organizations <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_getting-started_concepts.html" target="new">terminology and concepts</a></li>
+    <li>AWS Organizations: <a href="https://aws.amazon.com/organizations/faqs/#Core_concepts" target="new">Core Concepts</a></li>
+    <li>Introducing AWS Organization        (AWS <a href="https://youtu.be/T4NK8fv8YdI" target="new">YouTube video</a>)</li>
+    <li>AWS Multiple Account <a href="https://d1.awsstatic.com/aws-answers/AWS_Multi_Account_Security_Strategy.pdf" target="new">Security Strategy</a> (2017)</li>
+    <li>Managing Multi-Account AWS        Environments (AWS re:Inforce <a href="https://youtu.be/fxo67UeeN1A" target="new">YouTube Video</a> (45 mins))</li>
+    <li>Inheritance of <a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps.html#scp-about-inheritance" target="new">SCPs in the OU hierarchy</a></li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

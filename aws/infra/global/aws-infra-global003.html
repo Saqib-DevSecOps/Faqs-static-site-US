@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Other than AWS Regions, what are the other global infrastructure components?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">In addition to the AWS Region, what are the other global infrastructure components?
+<em hidden="categorymeta">[AWS: Infrastructure: AWS Edge Locations, AWS Regional Edge Cache, Edge]</em>
+<ol type="a">
+  <li value="1">Availability Zones (AZ)</li>
+  <ol type="i">
+    <li value="1">Every AWS Region is partitioned into multiple Availability Zones (AZ). Each Availability Zone is described as a logical data center, as each AZ is a collection of one or more physical data centers.</li>
+    <ol type="1">
+      <li value="1">Thinks of an AZ as a logical data center</li>
+      <li>Composed of one or more physical data centers</li>
+      <li>Hosts AWS services: compute, storage, network, etc.</li>
+      <li>Has independent power, cooling, and physical security and is connected via redundant, ultra-low-latency networks</li>
+      <li>Connected one to another with high-speed links for high-availability (HA) and increased bandwidth</li>
+    </ol>
+    <li>AZs have a certain level of <strong>isolation</strong> from one another, to create <strong>fault domains</strong>.</li>
+    <ol type="1">
+      <li value="1">I.e. to a certain extent each AZ can be considered standalone</li>
+      <li>Each with its own power, networking, defined coverage area, etc.</li>
+    </ol>
+    <li>A benefit of this isolation is that disruptions that might affect one AZ, are isolated to just that one AZ, leaving the other AZs within the Region unaffected.</li>
+    <li>A follow-on benefit of having multiple AZs within a Region, is that customers can create highly-available architectures where services can be deployed across multiple AZs, in a way that minimizes or eliminates single points of failure (SPOF).</li>
+    <ol type="1">
+      <li value="1">For example, customers can deploy a primary database in one AZ, and a secondary database in another AZ, such that if the AZ with the <strong>primary database became unavailable</strong>, the customer could quickly <strong>failover to the secondary database in the other AZ</strong>, with minimal or no disruptions to their end-users.</li>
+    </ol>
+  </ol>
+</ol>
+<ol type="a">
+  <li value="2">Edge Location</li>
+  <ol type="i">
+    <li value="1">AKA CloudFront Points of Presence (POP)</li>
+    <li>Used to cache content closer to the end-user</li>
+    <li>Has limited capacity, as such, old or non-active content may eventually aged-out, and deleted from the Edge Location, to make room for new, or more active content</li>
+    <li>May or may not be located in an AWS Region</li>
+    <li>Even if the Edge Location is geographically located in an AWS Region, they are not part of an AWS Region, or an Availability Zone.</li>
+    <li>Edge locations are used by AWS CloudFront and AWS Lambda@Edge to cache content and run code respectively for the end-user at the lowest network latency.</li>
+    <li>Edge locations are a worldwide network of data centers. These data centers are located in a way that maximizes proximity of the content to the end-user. Usually this includes positioning edge locations in areas not currently served by an AWS Region.</li>
+    <li>Powered by the AWS CloudFront service</li>
+  </ol>
+  <li>Regional Edge Cache</li>
+  <ol type="i">
+    <li value="1">Is effectively a backup for Edge Locations</li>
+    <li>Content is cached both at the Edge Location and Regional Edge Cache</li>
+    <li>There are fewer Regional Edge Cache servers than Edge Locations</li>
+    <li>Each Regional Edge Cache is bigger, i.e. can hold more content than each Edge Location</li>
+    <li>If content is not found in the Edge Location, CloudFront then looks for it in the Regional Edge Cache</li>
+    <li>It is located between your origin server (i.e. the original location of the content) and the global edge locations that serve content directly to your viewers. </li>
+    <li>Regional edge cache locations generally serve the same function as the edge location. They are facilities that help minimize latency to the content for the end-user. Regional edge locations are a secondary source of the content. I.e. when a user requests the content, if it does not exist in the edge location, the system will look for it in the nearest regional edge cache server. Only if it's not there either will the origin server be queries.</li>
+  </ol>
+  <li>Points of Presence</li>
+  <ol type="i">
+    <li value="1">A useful analogy for the AWS Points of Presence is the military concept of the Forward Operating Base (FOB). A FOB is an operational military position that extends strategically out beyond the main operating base, typically closer to the enemy or theater of battle.</li>
+    <li>The goal is to distribute content with low latency and high data transfer rates by serving requests using a network of edge locations around the world.</li>
+    <li>This helps improve performance for your viewers while lowering the operational burden and cost of scaling your origin resources. </li>
+    <li>The Points of Presence (POP) caches content, typically outside the AWS Region, closer to the end-user, with a goal of improving the consumption experience for the end-user. I.e. it minimizes the latency between the end-user and the content.</li>
+  </ol>
+  <li>Amazon CloudFront</li>
+  <ol type="i">
+    <li value="1">Amazon CloudFront is a web service that speeds up distribution of your static and dynamic web content, for example, .html, .css, .php, image, and media files, to end users.</li>
+    <li>Amazon CloudFront employs a global network of Edge Locations and regional edge caches that cache copies of your content close to your viewers.</li>
+    <li>CloudFront delivers your content through a worldwide network of edge locations.</li>
+    <ol type="1">
+      <li value="1">When an end user requests content that you're serving with CloudFront, the user is routed to the edge location that provides the lowest latency, so content is delivered with the best possible performance.</li>
+      <li>If the content is already in that edge location, CloudFront delivers it immediately. If the content is not currently in that edge location, CloudFront retrieves it from an Amazon S3 bucket or an HTTP server (for example, a web server) that you have identified as the source for the definitive version of your content.</li>
+    </ol>
+    <li>CloudFront is the AWS service that powers the CDN. Content Providers use CloudFront to make        their data available to the end-user in a manner that enhances the        consumption experience</li>
+    <li>Amazon CloudFront ensures that end-user requests are served by the closest edge location. As a        result, viewer requests travel a short distance, improving performance        for your viewers. For files not cached at the edge locations and the        regional edge caches, Amazon CloudFront keeps persistent connections with        your origin servers so that those files can be fetched from the origin        servers as quickly as possible. Finally, Amazon CloudFront uses        additional optimizations – e.g. wider TCP initial congestion window – to        provide higher performance while delivering your content to viewers.</li>
+    <li>Amazon CloudFront, Amazon        Route 53, AWS Firewall Manager, AWS Shield, and AWS WAF services are        offered at AWS Edge Locations.</li>
+  </ol>
+  <li>CloudFront</li>
+  <ol type="i">
+    <li value="1">The AWS service        used to cache content closer to the target end-user, such that the        end-user can consume that content with lower latency and better        performance.</li>
+    <li>CDN is the network  Edge Locations and Regional Edge Caches        around the globe.</li>
+    <li>A CloudFront CDN is the        global network of Amazon data centers, origin servers and custom origins,        Edge Location, and Regional Edge Caches.</li>
+    <li>The use-case for CDNs, at a        top-level is to bring content closer to the end-user, and it does this by        reducing the distance between the content, and the target end-user.</li>
+    <li>The components of the        Content Delivery Network (CDN) include:</li>
+    <ol type="1">
+      <li value="1">Edge Location</li>
+      <li>Regional Edge Caches</li>
+      <li>Amazon CloudFront</li>
+      <li>Distributions</li>
+      <li>Origin Server</li>
+      <li>Custom Origin</li>
+    </ol>
+  </ol>
+  <li>An <em>Origin</em> server stores the original, definitive version of your content. An       origin server is an S3 bucket.</li>
+  <li>A <strong><em>Custom Origin</em></strong> stores the origin, definitive version of your content, at a       location other than an S3 bucket, e.g. HTTP server on EC2, or on-premises.</li>
+</ol>
+<ol type="a">
+  <li value="9"><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">CloudFront <a href="https://aws.amazon.com/cloudfront/faqs/#Edge_locations" target="new">Edge Locations</a></li>
+    <li>How <a href="http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowCloudFrontWorks.html" target="new">CloudFront delivers content</a></li>
+    <li>Working with <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/distribution-working-with.html" target="new">CloudFront Distributions</a></li>
+    <li>What is an Edge Location in        AWS? A Simple Explanation (<a href="https://www.lastweekinaws.com/blog/what-is-an-edge-location-in-aws-a-simple-explanation/" target="new">lastweekinaws.com</a>)</li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

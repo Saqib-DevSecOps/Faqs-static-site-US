@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Can you modify the instance size of a Reserved Instance?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">Can you modify the instance size of a Reserved Instance?
+<em hidden="categorymeta">[AWS: Compute:  Pricing]</em>
+<ol type="a">
+  <li value="1">Yes, you can modify the       instance size of a Reserved Instance if the following requirements are       met.</li>
+  <ol type="i">
+    <li value="1">The platform is        Linux/UNIX.</li>
+    <li>The new Instance size must        be in the same Instance family. I.e. you <strong>cannot</strong> modify an Reserved Instance from <strong>t2</strong> to <strong>t3</strong>.</li>
+  </ol>
+  <li>The original and new Reserved       Instance must have the same instance size footprint.</li>
+  <li><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">Reserved Instance <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ri-modifying.html#ri-modification-limits">Modification Limits</a></li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

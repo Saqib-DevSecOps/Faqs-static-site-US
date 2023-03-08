@@ -1,0 +1,223 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>An Overview of the AWS Edge Infrastructure Components</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">An Overview of the AWS Edge Infrastructure Components
+<em hidden="categorymeta">[AWS: Infrastructure: AWS Edge Locations, AWS Regional Edge Cache, Edge]</em>
+<ol type="a">
+  <li value="1">Note: The components below are better described as edge components, however they are full citizens of the AWS Global Infrastructure ecosystem. The scope of these components is not global. It is regional, like AWS Ground Station, or a data center facility scope, like AWS Outposts</li>
+  <li>Edge Infrastructure Components (or AWS Infrastructure for the Edges)</li>
+  <ol type="i">
+    <li value="1">AWS Ground Station</li>
+    <ol type="1">
+      <li value="1">&quot;AWS Ground Station is a fully managed service that lets you control satellite communications, process data, and scale your operations without having to worry about building or managing your own ground station infrastructure.&quot;</li>
+      <li>&quot;With AWS Ground Station, you have direct access to AWS services and the AWS Global Infrastructure including a low-latency global fiber network.&quot;</li>
+      <li>&quot;You can save up to 80% on the cost of your ground station operations by paying only for the actual antenna time used, and relying on the global footprint of ground stations to download data when and where you need it.&quot;</li>
+      <li>&quot;There are no long-term commitments.&quot;</li>
+    </ol>
+    <ol type="1">
+      <li value="5"><strong>References:</strong></li>
+      <ol type="i">
+        <li>AWS Ground Station <a href="https://aws.amazon.com/ground-station/" target="new">Overview</a></li>
+      </ol>
+    </ol>
+    <li>AWS Wavelength </li>
+    <ol type="1">
+      <li value="1">&quot;AWS Wavelength is designed to deliver ultra-low latency applications to 5G devices by extending AWS infrastructure, services, APIs, and tools to 5G networks. Wavelength embeds storage and compute inside telco providers&rsquo; 5G networks to help developers build new applications for 5G end-users requiring single-digit millisecond latency, such as IoT devices, game streaming, autonomous vehicles, and live media production.&quot;</li>
+      <li>&quot;AWS Wavelength brings AWS services to the edge of the 5G network, minimizing latency when connecting to an application from a mobile device.&quot;</li>
+      <li>&quot;Wavelength Zones are AWS infrastructure deployments that embed AWS compute and storage services within communications service providers&rsquo; (CSP) datacenters at the edge of the 5G network, so application traffic can reach application servers running in Wavelength Zones without leaving the telecommunications network. This avoids the latency that would result from application traffic having to traverse multiple hops across the Internet to reach their destination, enabling customers to take full advantage of modern 5G networks.&quot;</li>
+      <li>&quot;Wavelength Zones allow developers to build applications that deliver ultra-low latencies to 5G devices and end users. Wavelength deploys standard AWS compute and storage services to the edge of telecommunication carriers' 5G networks.&quot;</li>
+      <li>&quot;A Wavelength Zone is a logical extension of a Region, and is managed by the control plane in the Region.&quot;</li>
+      <li>&quot;A Wavelength Zone is represented by a Region code followed by an identifier that indicates the Wavelength Zone, for example, us-east-1-wl1-bos-wlz-1.&quot;</li>
+      <li>&quot;Each Wavelength Zone is specific to a carrier and location. Wavelength Zones are connected to the parent Region through a redundant and high-bandwidth private network, which provides the applications running in Wavelength Zones fast, secure, and seamless access to the rest of AWS&rsquo; services.&quot;</li>
+      <li>&quot;Wavelength will be available within CSP networks such as Verizon, Vodafone, KDDI, and SK Telecom in places like the United States, Europe, Japan, and Korea to enable you to deliver ultra-low latency applications to your global base of end-users and connected devices.&quot;</li>
+      <li>&quot;AWS announced a partnership with Verizon in December 2019. Today Wavelength Zones are available through Verizon in several US cities, including: Chicago, Atlanta, Boston, Dallas, Denver, Las Vegas, Miami, New York City, San Francisco, Seattle, and Washington DC.<br>
+        Other partnerships include Vodafone, for service in London, UK; KDDI for service in Tokyo and Osaka, Japan; SK Telecom, for service in Daejeon, South Korea.&quot;</li>
+      <li>The CSP does not need to buy and place hardware in their data center. Hardware and services are provided by AWS. With a Carrier Gateway for connectivity between the Region and the CSP data center.</li>
+      <li>Services available in the AWS Wavelength Zone includes, Amazon EC2 instances, Amazon EBS volumes, and Amazon VPC subnets and carrier gateways. &quot;You can also use services that orchestrate or work with EC2, EBS and VPC such as Amazon EC2 Auto Scaling, Amazon EKS clusters, Amazon ECS clusters, Amazon EC2 Systems Manager, Amazon CloudWatch, AWS CloudTrail, and AWS CloudFormation. The services in Wavelength are part of a VPC that is connected over a reliable, high-bandwidth connection to an AWS Region for easy access to services including Amazon DynamoDB and Amazon RDS&quot;</li>
+      <li>Use cases for AWS Wavelength includes: Connected vehicles, Interactive live video streams, AR/VR, ML-assisted diagnostics for healthcare, Real-time gaming, e.g. &quot;with AWS Wavelength, the most demanding games can be made available on end-user devices that have limited processing power by streaming  these games from game servers in Wavelength Zones.&quot;</li>
+
+
+  <li><strong>References:</strong></li>
+  <ol type="i">
+    <li>Edge Computing for 5G Networks with AWS Wavelength (<a href="https://d1.awsstatic.com/Wavelength2020/Wavelength-Solution-Brief-FINAL-Aug2020.pdf" target="new">AWS</a>)</li>
+    <li>Bring AWS services to the edge of the Verizon 5G network (<a href="https://www.verizon.com/business/solutions/5g/edge-computing/aws-wavelength-5g/" target="new">Verizon</a>)</li>
+    <li>AWS Wavelength Overview (<a href="https://aws.amazon.com/wavelength/" target="new">AWS</a>)</li>
+    <li>AWS Wavelength <a href="https://aws.amazon.com/wavelength/features/" target="new">features and services</a></li>
+    <li>AWS Wavelength <a href="https://aws.amazon.com/wavelength/faqs/" target="new">FAQs</a></li>
+  </ol>
+		
+		    </ol>
+  </ol>
+
+<ol type="i">
+  <li value="3">AWS Outposts</li>
+  <ol type="1">
+    <li value="1">&quot;AWS Outposts is designed for workloads that must remain on-premises due to latency requirements, but where customers want that on-prem workload to run seamlessly with their AWS workloads. AWS Outposts are fully managed and configurable compute and storage racks built with AWS-designed hardware, which allows customers to run compute and storage on-premises while seamlessly connecting to AWS&rsquo;s broad array of cloud services.&quot;</li>
+    <li>&quot;AWS Outposts brings native AWS services, infrastructure, and operating models to virtually any data center, co-location space, or on-premises facility.&quot;</li>
+    <li>Extends the AWS infrastructure and services, onto a customer's on-premises or co-location facility</li>
+    <li>&quot;AWS Outposts enables native AWS services, infrastructure, and operating models in on-premises facilities. In AWS Outposts environments, you can use the same AWS APIs, tools, and infrastructure that you use in the AWS Cloud.&quot;</li>
+    <li>It is made available 42U racks or smaller form-factors</li>
+    <li>&quot;Once the rack is installed on-site, the customer is responsible for power, connectivity into the LAN, and environmental prerequisites such as temperature, humidity, and airflow.<br>
+      The customer is also responsible for the physical security of the Outpost location, however each rack has a lockable door and tamper detection features.<br>
+      Each server is protected by a removable and destroyable Nitro hardware security key.<br>
+      Data on the Outpost is encrypted both at-rest, and in-transit between nodes in the Outpost and back to the AWS region.&quot;</li>
+    <li>There are a growing number of AWS services: compute, storage, database, and other services, available via AWS Outposts</li>
+    <li>It is an IT-as-a-Service platform from Amazon Web Services (AWS), deployed at the customer's facility</li>
+    <li>It provides a connection path back to the AWS Region</li>
+    <li>Customers use AWS Outposts to run services in their local environments, like Amazon Elastic Compute Cloud (EC2), Amazon Elastic Block Store (EBS), and Amazon Relational Database Service (RDS), and are ideal for workloads that require low latency access to on-premises systems, local data processing, or local data storage.</li>
+    <li>Other challenges that could be addressed by using AWS Outposts include a need to meet data residency requirements, which demands that certain data or applications reside locally, and legacy software that are not cloud-ready.</li>
+    <li>AWS Outposts is similar to AWS Wavelength in a number of ways, however it addresses different use cases.</li>
+
+  
+    <li><strong>References:</strong></li>
+    <ol type="i">
+      <li>Modernizing Your Enterprise with <a href="https://d1.awsstatic.com/product-marketing/Outposts/AWS%20Outposts%20Modernization%20Ebook.pdf" target="new">AWS Outposts</a></li>
+<li>Configuring <a href="https://aws.amazon.com/blogs/compute/configuring-low-latency-connectivity-between-aws-outposts-rack-using-coip-and-on-premises-data/" target="new">low latency connectivity</a> between AWS Outposts rack and on-premises data using CoIP</li>
+      <li>What's the Difference: AWS Outpost, Wavelength, Snowball Edge? (<a href="https://blog.56k.cloud/whats-the-differences-aws-outpost-wavelength-snowball/">56K Cloud</a>)</li>
+      <li>The major hybrid cloud options compared: AWS Outposts vs Azure Stack vs Google Anthos (<a href="https://www.computerworld.com/article/3428108/the-major-hybrid-cloud-options-compared-aws-outposts-vs-azure-stack-vs-google-anthos.html" target="new">computerworld.com</a>)</li>
+      <li>VMware Cloud on AWS Outposts Review (<a href="https://esxsi.com/2022/03/21/vmc-outposts/" target="new">esxi.com</a>)</li>
+    </ol>
+  </ol>
+  <li>AWS Snow Family</li>
+  <ol type="1">
+    <li value="1">A family of appliances for data transfer or data processing at the edge.</li>
+    <li>AWS Snowball is a service of ruggedized physical storage and computing devices, that enable you to move data in and out of AWS.</li>
+    <li>The service helps overcome challenges that you can encounter with large-scale data transfers, including long transfer times, insufficient bandwidth, and restricted access to the database from outside the domain.</li>
+    <li>AWS Snowball Edge is an AWS service you can use to transfer data to the cloud at faster-than-network speeds using an AWS-owned appliance.<br>
+      An AWS Snowball Edge device can hold up to 80 TB of usable storage. It uses 256-bit encryption and an industry-standard Trusted Platform Module (TPM) to ensure both security and full chain-of-custody for your data.</li>
+    <li>Appliance form factors:</li>
+    <ol type="a">
+      <li value="1">Snowcone</li>
+      <ul type="disc">
+        <li>Use case: IoT, Edge          processing</li>
+        <li>Usable capacity: 8 TB per appliance</li>
+      </ul>
+      <li>Snowball Edge</li>
+      <ul type="disc">
+        <li>Use case: data transfer, edge processing</li>
+        <li>Three versions:</li>
+        <ul type="disc">
+          <li>Compute-optimized</li>
+          <ul type="disc">
+            <li>42 TB (39.5 usable) HDD capacity</li>
+            <li>52 vCPUs</li>
+            <li>7.68 TB of dedicated NVMe SSD</li>
+          </ul>
+          <li>Compute Optimized with GPU</li>
+          <ul type="disc">
+            <li>42 TB (39.5 usable) HDD capacity</li>
+            <li>52 vCPUs, GPU</li>
+            <li>7.68 TB of dedicated NVMe SSD</li>
+          </ul>
+          <li>Storage-optimized</li>
+          <ul type="disc">
+            <li>80 TB usable HDD capacity</li>
+            <li>40 vCPUs</li>
+            <li>1 TB of additional SSD storage</li>
+          </ul>
+        </ul>
+        <li>Depending on the country and the shipping plan, it usually takes anywhere from <a href="https://docs.aws.amazon.com/snowball/latest/developer-guide/mailing-storage.html#shippingspeeds" target="new">1 to 7 working days</a> to deliver the snow devices</li>
+      </ul>
+      <li>Snowmobile</li>
+      <ul type="disc">
+        <li>Use case: data transfer</li>
+        <li>Usable capacity: 100 PB</li>
+        <li>Shipping container worth of storage capacity</li>
+      </ul>
+    </ol>
+    <li>Workflow:</li>
+    <ol type="a">
+      <li value="1">Customer orders device from AWS</li>
+      <li>Device shipped to customer (or driven for Snowmobile)</li>
+      <li>Customer connects device to network, transfers files to it</li>
+      <li>Customer ships appliance to AWS</li>
+      <li>AWS downloads appliance data to S3 bucket</li>
+      <li>AWS gives customer access to S3 bucket</li>
+    </ol>
+    <li><strong>References:</strong></li>
+    <ol type="i">
+      <li>What Is AWS <a href="https://docs.aws.amazon.com/snowball/latest/developer-guide/whatisedge.html" target="new">Snowball Edge</a>?</li>
+      <li>AWS Snowball Edge <a href="https://docs.aws.amazon.com/snowball/latest/developer-guide/specifications.html" target="new">Specifications</a></li>
+      <li>AWS Snowball Edge <a href="https://docs.aws.amazon.com/snowball/latest/developer-guide/device-differences.html#device-options" target="new">Device Options</a></li>
+      <li>AWS Snow Family Feature <a href="https://aws.amazon.com/snow/#AWS_Snow_Family_service_models" target="new">comparison matrix</a></li>
+    </ol>
+  </ol>
+  <li>AWS       Storage Gateway</li>
+  <ol type="1">
+    <li value="1">A storage appliance that provides a storage conduit between AWS and customer data center</li>
+    <li>Gateway types:</li>
+    <ol type="a">
+      <li value="1">Amazon S3 File Gateway</li>
+      <ul type="disc">
+        <li>Supported Protocol: NFS, SMB</li>
+        <li>&quot;Amazon S3 File Gateway presents a file interface that enables you to store files as objects in Amazon S3 using the industry-standard NFS and SMB file protocols, and access those files via NFS and SMB from your data center or Amazon EC2, or access those files as objects directly in Amazon S3&quot;</li>
+      </ul>
+      <li>Amazon FSx File Gateway</li>
+      <ul type="disc">
+        <li>Supported Protocol: SMB</li>
+        <li>&quot;Amazon FSx File Gateway provides fast, low-latency on-premises access to fully managed, highly reliable, and scalable file shares in the cloud using the industry-standard SMB protocol.&quot;</li>
+      </ul>
+      <li>Volume Gateway</li>
+      <ul type="disc">
+        <li>Supported Protocol: iSCSI</li>
+        <li>&quot;Volume Gateway presents your applications block storage volumes using the iSCSI protocol.&quot;</li>
+      </ul>
+      <li>Amazon Tape Gateway</li>
+      <ul type="disc">
+        <li>Supported Protocol: iSCSI VTL</li>
+        <li>&quot;Tape Gateway presents a virtual tape library (VTL) consisting of virtual tape drives and a virtual media changer to your backup application using storage          industry standard iSCSI protocol.&quot;</li>
+      </ul>
+    </ol>
+    <li>The AWS Storage Gateway can be deployed in either a virtual or a physical appliance format:</li>
+    <ol type="a">
+      <li value="1">virtual appliance with: VMware ESXi, Microsoft Hyper-V, or Linux KVM</li>
+      <li>hardware appliance</li>
+      <li>virtual machine in VMware Cloud on AWS</li>
+      <li>or as an Amazon Machine Image (AMI) in Amazon EC2</li>
+    </ol>
+  </ol>
+  <ol type="1">
+    <li value="4"><strong>References:</strong></li>
+    <ol type="i">
+      <li value="1">Using the <a href="https://docs.aws.amazon.com/storagegateway/latest/userguide/hardware-appliance.html" target="new">Storage Gateway Hardware Appliance</a></li>
+      <li>Storage Gateway <a href="https://aws.amazon.com/storagegateway/features/#Storage_Gateway_Deployment_Options" target="new">Deployment Options</a></li>
+    </ol>
+  </ol>
+</ol>
+	
+	
+	</ol>
+
+<ol type="a">
+  <li value="3">Here are several descriptions/definitions of an AWS Region to help enforce the concept:</li>
+  <ol type="i">
+    <li value="1">An AWS <a href="https://aws.amazon.com/about-aws/global-infrastructure/regions_az/#Regions" target="new">Region</a> is a geographical location around the world where a complement of AWS Services is accessible, across multiple Availability Zones (AZ).</li>
+    <li>Each AWS Region consists of multiple, isolated, and physically separate AZ's within a geographic area. Each AZ within the Region consists of one or more physical data centers.</li>
+    <li>A  <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html" target="new">Region</a> spans a large geographic        area, e.g. a metropolitan area. It is an area where AWS has a presence,        and deploys its services in a highly-available manner, using multiple Availability Zones</li>
+    <li>Each AWS Region exists wholly within a single country domain</li>
+  </ol>
+  <ol type="i">
+    <li value="5">&quot;AWS Regions include multiple Availability Zones. Each Availability Zone consists of discrete data centers with redundant power and networking. They are housed in separate facilities, in locations that are carefully selected to mitigate environmental risks.&quot;</li>
+  </ol>
+  <ol type="i">
+    <li value="6">Customers can take advantage of the multiple Availability Zone infrastructure to deploy applications and databases that are highly-available.</li>
+    <li>Customers can avoid having a single point of failure in their architecture by designing their applications to run in multiple Availability Zones in the same Region for high-availability and across multiple Regions to achieve a degree of fault-tolerance.</li>
+    <ol style="list-style-type: none">
+      <li value="1"><strong>Note:</strong> While it is possible to design an architecture that is active/active across multiple Regions, i.e. use multiple Regions to meet their availability goals for an &quot;always-on&quot; service, and there are customers who do this, e.g. Netflix, most customers who use multiple Regions do so for backup or disaster recovery purposes, or to meet data governance laws.</li>
+    </ol>
+    <li>Synchronous data replication across different Availability Zone in the same Region or asynchronous replication across Regions is possible.</li>
+    <li>As of July 2022, every standard AWS Region has three or more Availability Zones (AZ). However the formal description is that an AWS Region consists multiple AZs, i.e. two or more AZs. </li>
+    <ol style="list-style-type: none">
+      <li value="1"><strong>Note:</strong> AWS may limit the number of AZs visible to new AWS customers in some Regions, e.g. New customers can access two Availability Zones in US West (Northern California). As per this <a href="https://aws.amazon.com/premiumsupport/knowledge-center/vpc-find-availability-zone-options/" target="new">premium support document</a>.</li>
+    </ol>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

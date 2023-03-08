@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>How do you create a network in AWS?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">How do you create a network in AWS?</li>
+	<em hidden="categorymeta">[AWS: Networking: Foundations]</em>
+  <ol type="a">
+    <li value="1">The Amazon VPC or        Virtual Private Cloud is a service that lets customers provision a        logically isolated section of the Amazon Web Services (AWS) cloud, and        then be able to launch AWS resources in that space.</li>
+    <li>The Amazon VPC gives        customers complete control over their virtual networking environment,        including:</li>
+    <ol type="i">
+      <li value="1">selecting the IP         address ranges, or CIDR-blocks</li>
+      <li>creation of subnets</li>
+      <li>configuration of route         tables</li>
+      <li>attaching network gateways</li>
+      <li>deployment of hardware         Virtual Private Network (VPN) to facilitate the connection between the         corporate datacenter and the VPC.</li>
+    </ol>
+    <li>The characteristics of a        Virtual Private Cloud include:</li>
+    <ol type="i">
+      <li value="1">When created,         VPCs span all Availability Zones (AZs) within a single AWS Region</li>
+      <li>Each AWS account can create         one or more VPCs per Region</li>
+      <li>VPCs can have the following         components:</li>
+      <ol type="1">
+        <li value="1">Subnets -          partitions the VPC into one or more virtual sub-networks</li>
+        <li>Gateways - attach to the          VPC to enable controlled access to and from the VPC; including Internet          Gateway, Virtual Private Gateway (VGW), Network Address Translation          Gateway (NAT), Egress-only Internet Gateway.</li>
+      </ol>
+      <li>VPCs are isolated by         default on creation, access is enabled through the gateways, VPC         Endpoints, and VPC Peering.
+		  
+<div>
+  <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+    <tr>
+      <td><img src="images/nw/info/networkvpc001.png" width="399" height="642" alt=""><br>
+        Image: <a href="https://aws.amazon.com/blogs/aws/amazon-vpc-far-more-than-everywhere/" target="new">https://aws.amazon.com/blogs/aws/amazon-vpc-far-more-than-everywhere/</a></td>
+    </tr>
+  </table>
+</div></li>
+    </ol> </ol>
+
+<ol type="a">
+  <li value="4"><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">Amazon <a href="https://aws.amazon.com/vpc/faqs/" target="new">VPC FAQs</a></li>
+    <li>Amazon <a href="https://aws.amazon.com/blogs/aws/amazon-vpc-far-more-than-everywhere/" target="new">VPC goes GA</a> in 2011</li>
+    <li>AWS <a href="https://aws.amazon.com/products/networking/" target="new">Networking and Content        Delivery</a></li>
+  </ol>
+</ol> 
+</ol>
+</body>
+</html>

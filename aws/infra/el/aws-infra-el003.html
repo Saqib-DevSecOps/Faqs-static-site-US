@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Is Edge Location same as POP?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">Is Edge Location same as POP?
+	  <em hidden="categorymeta">[AWS:  Infrastructure: AWS Edge Locations]</em>
+<ol type="a">
+  <li value="1">&quot;CloudFront <em>points of presence</em> (also known as POPs) make sure that popular content can be served quickly to your viewers.&quot;</li>
+  <li>POP, or Point of Presence are the entities that make up the AWS Content Delivery Network (CDN). They are the endpoints on the CDN</li>
+  <li>AWS Points of Presence consists of both <strong><em>Edge Locations</em></strong> and <strong><em>Regional Edge Caches</em></strong></li>
+  <li>Points of Presence, or POP are mini data centers operated by AWS, and they host or cache content, closer to end-users, minimizing latency between the content and the end-user.</li>
+  <li>The purpose of the Point of Presence( POP) entities is to cache content closer to the end-user, so they can consume that content, in a more efficient manner. I.e. with lower latency and better performance than if they had to traverse to the origin of the data to access the content.</li>
+  <li><strong>Note:</strong> While Edge Locations and Points of Presence do the same thing, i.e. cache content, Regional Edge Caches are fewer in number than Edge Locations, and they are not directly exposed to the customer. Think of Regional Edge Caches as backups to the Regional Edge Caches, holding content for some time even after they've been aged out of Edge Locations</li>
+  <li><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">How CloudFront works with <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowCloudFrontWorks.html#CloudFrontRegionaledgecaches" target="new">regional edge caches</a></li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

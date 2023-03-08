@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Instance Types vs. Instance Family, are they the same thing?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">Instance Types vs. Instance Family, are they the same thing?
+<em hidden="categorymeta">[AWS: Compute:  Instances]</em>
+<ol type="a">
+  <li value="1">Not the same thing</li>
+  <li>In AWS Compute services,       virtual machines are called <strong><em>instances</em></strong>, or <strong><em>EC2 Instances</em></strong>.</li>
+  <li>AWS EC2 provides wide       selection of Instance Types (or virtual hardware)  with different       configurations of CPU, memory, storage,       and networking resources so a user can tailor their compute resources to       the needs of their application.</li>
+  <li>Various Instance Types are       grouped into Instance Families with optimized to fit particular use cases</li>
+  <li>EC2 Instances can be       understood by breaking them down into:</li>
+  <ol type="i">
+    <li value="1">Instance Category</li>
+    <ol type="1">
+      <li value="1">EC2 Instance         Categories are Instances grouped by capabilities and use-case.</li>
+      <li>There are five Instance         Categories:</li>
+      <ol type="a">
+        <li value="1">General purpose</li>
+        <li>Compute optimized</li>
+        <li>Memory optimized</li>
+        <li>Storage optimized</li>
+        <li>Accelerated Computing</li>
+      </ol>
+      <li>You can choose from one of         the Instance Categories based on high-level         use-case, e.g.         the Compute Optimized Category for workloads         that are compute-bound, needing access to high-performance CPUs.</li>
+      <li>Note: Instance Category is my         name for this group of five EC2 Instance types. Describing them as         Instance Types, as in some documentation, is confusing. E.g.</li>
+      <ol type="a">
+        <li value="1">An <a href="https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-right-sizing/overview-amazon-ec2-amazon-rds.html" target="new">Overview of Amazon EC2 and Amazon RDS Instance          Families</a> describes these as Instance Families</li>
+        <li>Where <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-hardware-specs" target="new">Hardware Specifications</a> describes Instance          Families as we do below.</li>
+        <li>Let me          know if you find a more authoritative definition.</li>
+      </ol>
+    </ol>
+    <li>Instance Family</li>
+    <ol type="1">
+      <li value="1">Within each         Instance Category, there are multiple instance families. These allow you         to further target the use-case to the class of instance, e.g. by         processor capability, generation, etc.</li>
+      <ol type="a">
+        <li value="1">
+          <div>
+            <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+              <tr>
+                <td><p>&nbsp;Instance Category</p></td>
+                <td><p>&nbsp;Instance Family</p></td>
+              </tr>
+              <tr>
+                <td><p>&nbsp;General            Purpose: </p></td>
+                <td><p>&nbsp;Mac, T, M,            A</p></td>
+              </tr>
+              <tr>
+                <td><p>&nbsp;Compute            Optimized: </p></td>
+                <td><p>&nbsp;C, Hpc</p></td>
+              </tr>
+              <tr>
+                <td><p>&nbsp;Memory            Optimized: </p></td>
+                <td><p>&nbsp;R, X, High            Memory, z</p></td>
+              </tr>
+              <tr>
+                <td><p>&nbsp;Accelerated            Computing: </p></td>
+                <td><p>&nbsp;P, DL,            Trn, Inf, G, F, VT</p></td>
+              </tr>
+              <tr>
+                <td><p>&nbsp;Storage            Optimized: </p></td>
+                <td><p>&nbsp;Im, Is, I,            D, H</p></td>
+              </tr>
+            </table>
+          </div>
+        </li>
+      </ol>
+    </ol>
+    <li>Instance Generation</li>
+    <ol type="i">
+      <li value="1">After the         Instance Family: the Instance Generation</li>
+      <li>Each Instance Family is         further classified by its Generation. Each subsequent release of an         Instance Family is a newer generation.</li>
+      <li>Instance Generation is an         integer value, e.g. 1, 2, 3, 4, etc.</li>
+      <li>M6 indicated the 6th         generation of the M instance Type</li>
+      <li>The newer the Instance         Type, the higher the Instance Generation value, e.g. C7 is one         generation newer than C6.</li>
+      <li>Some older generation         Instances are still available for use. </li>
+      <li>Generally newer generation         Instances are offered at the same or lower price point, even as they         come with enhanced capabilities.</li>
+      <li>AWS continues to support         specific <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#previous-gen-instances" target="new">older generation</a> Instance Types, though         newer generation Instance Types are recommended to get the best         performance for your workload.</li>
+    </ol>
+    <li>Instance Size</li>
+    <ol type="i">
+      <li value="1">TBA:</li>
+    </ol>
+    <ol type="i">
+      <li value="2">M6.xlarge, the         relative capacities for CPU, Memory and Network</li>
+      <li>Each Instance has a size         component. The Size indicates a relative combination of CPU, Memory and         Network capacities.</li>
+      <ol type="a">
+        <li value="1">The Size value with the string, metal ,          represents a bare metal Instance that AWS can provision for customers.</li>
+      </ol>
+    </ol>
+    <li>Instance Type naming        convention can indicate additional capabilities, such as:</li>
+    <ol type="i">
+      <li value="1">
+        <div>
+          <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+            <tr>
+              <td><p>a</p></td>
+              <td><p>AMD EPYC           processors</p></td>
+            </tr>
+            <tr>
+              <td><p>g</p></td>
+              <td><p>AWS           Graviton processors</p></td>
+            </tr>
+            <tr>
+              <td><p>i</p></td>
+              <td><p>3rd gen           Intel Xeon processor</p></td>
+            </tr>
+            <tr>
+              <td><p>d</p></td>
+              <td><p>Locally           attached NVMe SSD</p></td>
+            </tr>
+            <tr>
+              <td><p>n</p></td>
+              <td><p>Network           optimization</p></td>
+            </tr>
+            <tr>
+              <td><p>b</p></td>
+              <td><p>Block           storage optimization</p></td>
+            </tr>
+            <tr>
+              <td><p>e</p></td>
+              <td><p>Extra           storage or memory</p></td>
+            </tr>
+            <tr>
+              <td><p>z</p></td>
+              <td><p>High           frequency</p></td>
+            </tr>
+            <tr>
+              <td><p>en</p></td>
+              <td><p>Dense NVMe           SSD and network</p></td>
+            </tr>
+            <tr>
+              <td><p>Inf</p></td>
+              <td><p>AWS           Inferentia chips</p></td>
+            </tr>
+            <tr>
+              <td><p>metal</p></td>
+              <td><p>Bare metal           instance</p></td>
+            </tr>
+          </table>
+        </div>
+      </li>
+    </ol>
+  </ol>
+  <li>First select an EC2 Instance       Family based on its general fit to your workload</li>
+  <ol type="i">
+    <li value="1">e.g. for        workloads that are compute-bound and require high-performance CPUs, use Instance        Types from the Compute Instance Family</li>
+  </ol>
+  <li>Next, from within the       Instance Family, select an Instance Type</li>
+  <ol type="i">
+    <li value="1">A1 Instance Types        deliver significant cost savings and are ideally suited for scale-out and        Arm-based workloads.</li>
+  </ol>
+  <li>Naming format: (Redraw image and change Instance Category       to Instance Family)       (maybe       NOT)</li>
+
+<div>
+  <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+    <tr>
+      <td><img src="images/compute/instances/instances001.png" width="338" height="125" alt=""></td>
+    </tr>
+  </table>
+</div></ol>
+<ol type="a">
+  <li value="9"><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">What is an Amazon <a href="https://aws.amazon.com/what-is/compute/#What_is_an_Amazon_EC2_instance.3F" target="new">EC2 instance</a>?</li>
+    <li>Amazon EC2 <a href="https://aws.amazon.com/ec2/instance-types/">Instance Types</a></li>
+    <li>Available <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#AvailableInstanceTypes" target="new">instance types</a></li>
+    <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html#instance-hardware-specs" target="new">Hardware</a> specifications</li>
+    <li>Overview of Amazon <a href="https://docs.aws.amazon.com/whitepapers/latest/cost-optimization-right-sizing/overview-amazon-ec2-amazon-rds.html" target="new">EC2 and Amazon RDS Instance        Families</a></li>
+    <li>How to choose which AWS EC2        instance class to use (<a href="https://www.linkedin.com/pulse/how-choose-which-aws-ec2-instance-class-use-satya-thirumani" target="new">linkedin.com</a>)</li>
+    <li>(TBA) AWS Instance Types And        Comparison (<a href="https://blogs.vmware.com/cloudhealth/aws-instance-types-and-comparison/" target="new">vmware.com</a>)</li>
+    <li>(TBA) The unconventional guide        to AWS EC2 instance types. (<a href="https://www.archerimagine.com/articles/aws/aws-ec2-instance-type-tutorial.html" target="new">archerimagine.com</a>)</li>
+    <li>(TBA) AWS EC2 Instances: Choose        Your EC2 Family Wisely (<a href="https://www.apexon.com/blog/aws-ec2-instances-choose-your-ec2-family-wisely/" target="new">apexon.com</a>)</li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

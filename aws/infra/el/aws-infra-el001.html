@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>What are the differences between Edge Location and Regional Edge Cache?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">What are the differences between Edge Location and Regional Edge Cache?
+<em hidden="categorymeta">[AWS: Infrastructure: AWS Edge Locations]</em>
+<ol type="a">
+  <li value="1">Three key services are used together to serve content to end-users with low latency and better performance. They are Amazon CloudFront, Edge Locations and Regional Edge Caches.<br>
+    The goal of this system is to save the end user from traversing long distances over the Internet, from where they are located, to where the original content is stored.</li>
+  <ol type="i">
+    <li value="1">CloudFront is the AWS content delivery network (CDN) service. It manages the global network of Edge Locations and Regional Edge Caches. It enables content owners to place, or cache copies of their content closer to the end user. As the content is now in closer proximity to the end users, the end user can consume that content with better performance.</li>
+    <li>Edge Locations are sites that cache, or hold copies of content closer to the end user, such that the end user can then access the content with lower latency and better performance.</li>
+    <li>Regional Edge Caches, are sites that act as backups to edge locations. Like edge locations, Regional Edge Caches also hold content, however they can hold more content than Edge Locations, and they hold them longer, such that, if the content times out of the Edge Location, they will likely still be available in the Regional Edge Cache.</li>
+  </ol>
+  <li>Size: Regional Edge Cache has a larger cache width as such it can hold more content</li>
+  <li>Purpose: Regional Edge Cache acts as a backup to the Edge Locations, for when content ages out of the Edge Location</li>
+  <li>Quantity: Fewer number of Regional Edge Cache compared to Edge Locations</li>
+  <li>Access: Content owners and uses directly access Edge Locations to store and access content respectively. CloudFront manages the content in the Regional Edge Caches</li>
+  <li><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">How <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowCloudFrontWorks.html" target="new">CloudFront delivers</a> content</li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

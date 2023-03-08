@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Can you please talk about vertical scaling, i.e. Scale up and scale down, within instance?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">Can you please talk about vertical scaling, i.e. Scale up and scale down, within instance?
+<em hidden="categorymeta">[AWS, Compute,  Auto Scaling]</em>
+<ol type="a">
+  <li value="1">Scaling up or down is also       known as Vertical Scaling.</li>
+  <li>The process of scaling up (or       scaling down) involves changing system capacity by adding (or removing)       capacity or system resources for a discrete instance.</li>
+  <li>E.g. what if you have a web       server running on an EC2 Instance, and the web server needs more memory.       What would you do?</li>
+  <ol type="i">
+    <li value="1">An EC2 Instance        comes with a set amount of CPU or memory capacity, e.g. a <em><strong>t3.large</strong></em>        EC2 Instance type has 2 vCPU and 8 GiB of memory</li>
+    <li>If workload on this        Instance, e.g. your web server, needs more capacity, you provision a new        EC2 Instance, e.g. a <em><strong>c5.xlarge</strong></em> EC2 Instance type with 4        vCPU and 8 GiB, and move the workload to that new instance, giving it        access to more capacity</li>
+    <li>This type of scaling, where        you increase the capacity of a discrete system, e.g. an EC2 Instance, is        known as <em><strong>Scaling Up</strong></em>, or also known as <em><strong>Vertical Scaling</strong></em>.<br>
+      Note: Vertical Scaling can also involve a process of decreasing the        capacity of a discrete system, this is known as <em><strong>Scaling Down</strong></em>.</li>
+  </ol>
+  <li>Vertical Scaling, i.e. the       process of Scaling Up or Down and it involves a restart of the workload</li>
+</ol></li>
+</ol>
+</body>
+</html>

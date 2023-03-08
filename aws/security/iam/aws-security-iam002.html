@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>What is Programmatic Access?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">What is Programmatic Access?
+<em hidden="categorymeta">[AWS: Security: IAM, Credentials]</em>
+<ol type="a">
+  <li value="1">Programmatic access is the       use of an Access Key, to access AWS services</li>
+  <ol type="i">
+    <li value="1">An Access Key is        type of AWS credential</li>
+    <li>There are two types of AWS        credentials used for accessing your account: passwords        and access keys</li>
+    <li>Passwords are used to        sign-in to the AWS Management Console or Access Portal:</li>
+    <ul type="square">
+      <li>You can sign into the         Console either as a Root User, with an email         address and password, or an IAM User, with an account ID (or alias), user name, and password</li>
+      <li>To sign in through the AWS         access portal, as an IAM Identity Center (formerly AWS Single         Sign-On) user, you need a sign-in URL, user name, and password.</li>
+    </ul>
+    <li>Access Keys are a way to        verify your identity, to authenticate yourself to AWS, in order to invoke        actions in AWS programmatically:</li>
+    <ul type="square">
+      <li>Programmatic access could         be either via Software Development Kits (SDKs), or the AWS Command Line         Interface (AWS CLI)</li>
+    </ul>
+    <li>Both the AWS Root User and        individual IAM Users can be assigned a password and/or access keys</li>
+  </ol>
+  <ol type="i">
+    <li value="6"><strong>Note:</strong></li>
+
+<div>
+  <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+    <tr>
+      <td>It is a best    practice NOT to use the AWS Root User account to perform daily tasks, and in    particularly, do not access AWS programmatically as the Root User. As such,    do not create Access Keys for the Root User, or if you do, lock the keys away    securely.</td>
+    </tr>
+  </table>
+</div>  </ol>
+</ol>
+<ol type="a">
+  <li value="2">An Access Key is composed of an Access Key ID and a Secret Access       Key</li>
+  <ol type="i">
+    <li value="1">Access Key ID        (e.g. AKIAIOSFODNN7EXAMPLE)</li>
+    <li>Secret Access Key (e.g.        wA9SR7ZnFEMI+w7MDENGBAtSGCYEXAMP2jlZQXlK)</li>
+  </ol>
+  <li><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">Accessing AWS        using your <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html" target="new">AWS credentials</a></li>
+    <li>Programmatic <a href="https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys" target="new">access</a></li>
+    <li><a href="https://docs.aws.amazon.com/accounts/latest/reference/best-practices-root-user.html" target="new">Lock away</a> your AWS account root user        access keys</li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

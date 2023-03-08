@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Can you attach more than one SCP to an AWS Organizations entity?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">Can you attach more than one SCP to an AWS Organizations entity?
+<em hidden="categorymeta">[AWS: Management:  AWS Organizations, Policy]</em>
+<ol type="a">
+  <li value="1">Every AWS Organizations       entity (root, OU, account) must have at least one SCP attached at all       times.</li>
+  <li>You can have up to five SCP       attached to any AWS Organizations entity.</li>
+  <li><strong>Note:</strong> You cannot remove the last       SCP from an entity.</li>
+  <li><strong>Note:</strong> There is a <strong><em>default SCP</em></strong> named <strong><em>FullAWSAccess</em></strong>, which as the name implies, allows access to       every operation.</li>
+
+<div>
+  <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+    <tr>
+      <td><img src="images/mgmt/orgs/mgmtorgs0003.png" width="242" height="262" alt=""></td>
+    </tr>
+  </table>
+</div></ol>
+<ol type="a">
+  <li value="5"><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1"><a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_limits.html" target="new">Quotas</a> for AWS Organizations</li>
+    <li><a href="https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_attach.html" target="new">Attaching and detaching</a> service control policies</li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

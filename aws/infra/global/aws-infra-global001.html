@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Overview of the AWS Global Infrastructure Components</title>
+</head>
+
+<body>
+
+<ol style="list-style-type: none">
+  <li value="1">An Overview of the AWS Global Infrastructure Components
+<em hidden="categorymeta">[AWS: Infrastructure: Components, Regions, Availability Zones, Local Zones, Global  Network]</em>
+<ol type="a">
+  <li value="1">The AWS Global Infrastructure includes the components listed below, roughly in order of scope; from a Region, which is a geographic area with a full complement of AWS services, available in a highly-available       manner across multiple Availability Zones, to Points of Presence, which allows content providers to cache their content closer to the end-user:</li>
+  <ol type="i">
+    <li value="1">Regions</li>
+    <ol type="1">
+      <li value="1">The AWS Cloud infrastructure is built around AWS Regions and Availability Zones. An AWS Region is a physical location in the world which has multiple Availability Zones. </li>
+      <li>An AWS Region is a geographical area, that has multiple AWS physical data centers, which are grouped into multiple logical data centers (called Availability Zones), that serve a full-complement of core and other AWS services, made available across multiple Availability Zones.</li>
+    
+<div>
+  <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+    <tr>
+      <td>Note: The above description distinguished Regions from Local Zones, which are extensions of Regions, and host a more focused set of AWS services.</td>
+    </tr>
+  </table>
+</div></ol>
+  
+<ol type="1">
+  <li value="3">An AWS Region is &quot;AWS&rsquo; term for a physical location where it clusters data centers – that are deployed within a highly available, fault tolerant, and scalable environment.&quot;</li>
+  <li>Each AWS Region exists wholly within a single country's boundary</li>
+  <li>The benefit of an AWS Region includes, it allows customers to deploy resources closer to end-users, and to meet any data governance laws, which require data to be located in a specific geographic area, such as a single country boundary.</li>
+  <li>Amazon Regions are designed to be completely isolated from each other. This achieves the greatest possible fault tolerance and stability. </li>
+</ol></ol>
+
+	
+	
+	
+<ol type="i">
+  <li value="2">Availability Zones</li>
+  <ol type="1">
+    <li value="1">An Availability Zone (AZ) is a subset of an AWS Region</li>
+    <li>An AWS Region consists of multiple Availability Zones.</li>
+    <li>An Availability Zone can be considered a logical data center as each AZ consists of one or more discrete data centers, each with redundant power, networking, and connectivity, housed in separate facilities.</li>
+    <li>The AZs are physically separated from each other to create a fault domain, in the event of a disaster, yet highly connected to each other within the Region, to enable customers to deploy highly available architectures such as primary, and standby databases across multiple AZs, leveraging the high-speed connection between AZs to perform synchronous replication between the databases</li>
+    <li>A benefit of AZs is that it enables multi-AZ deployments, where a customer can deploy a service across multiple Availability Zones to minimize or eliminate a single point of failure</li>
+    <li>Availability Zones enable customers to create an production architecture that is highly available, fault tolerant, and scalable in a way that would not be possible with a single data center.</li>
+    <li>Within a Region, Availability Zones are connected through low-latency links.</li>
+    <li>AWS provides customers with the flexibility to place instances and store data within multiple geographic regions as well as across multiple Availability Zones within each AWS Region.</li>
+    <li>The resilience features of AZs include</li>
+    <ol type="a">
+      <li value="1">Each Availability Zone is designed as an independent failure zone.</li>
+      <li>Availability Zones are physically separated within a typical metropolitan region.</li>
+      <li>Each is located in lower risk flood plains (specific flood zone categorization varies by AWS Region).</li>
+      <li>Each has discrete uninterruptable power supply (UPS) and onsite backup generation facilities.</li>
+      <li>Each is fed via different grids from independent utilities to further reduce single points of failure.</li>
+      <li>Availability Zones are all redundantly connected to multiple tier-1 transit providers.</li>
+    </ol>
+  </ol>
+  <ol type="1">
+    <li value="10">Each Availability Zone is designed as an independent failure zone.</li>
+  </ol>
+  <ol type="1">
+    <li value="11"><strong>References:</strong></li>
+    <ol type="a">
+      <li value="1"><a href="https://d1.awsstatic.com/whitepapers/compliance/Using_AWS_in_GxP_Systems.pdf#%5B%7B%22num%22%3A49%2C%22gen%22%3A0%7D%2C%7B%22name%22%3A%22XYZ%22%7D%2C69%2C720%2C0%5D" target="new">Cloud Infrastructure</a> and Geography</li>
+      <li>Amazon Web Services (AWS) Data Center Locations: Regions and Availability Zones (<a href="https://dgtlinfra.com/amazon-web-services-aws-data-center-locations/" target="new">dgtlinfra.com</a>)</li>
+    </ol>
+  </ol>
+  <li>Local Zones</li>
+  <ol type="1">
+    <li value="1">&quot;Local Zones are an extension of an AWS Region that provide you the ability to place resources in multiple locations closer to your end users.&quot;</li>
+    <li>It is a &quot;a new type of AWS infrastructure designed to run workloads that require single-digit millisecond latency, like video rendering and graphics intensive, virtual desktop applications.&quot;</li>
+
+<div>
+  <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+    <tr>
+      <td>Note: Local Zones are different from Availability Zones in that Local Zones provide a core set of services to end-users who are in geographic proximity and have latency sensitive workloads, while Availability Zones provide access to the full array of AWS services.</td>
+    </tr>
+  </table>
+</div>
+	  
+	    </ol>
+	
+
+<ol type="1">
+  <li value="3">&quot;A Local Zone is represented by a Region code followed by an identifier that indicates the location, for example, us-west-2-lax-1a.&quot;</li>
+  <li>The benefit of AWS Local Zones is that it provides a subset of the full-array of AWS services to users in geographic proximity to the Local Zone, with extremely low-latency needs.</li>
+  <li>Local Zones are designed to serve specific geographies and industries. They contain services targeted to specific industries, e.g. the Local Zone in Los Angeles provides services targeted at the entertainment industry</li>
+</ol>
+<ol type="1">
+  <li value="6"><strong>References:</strong></li>
+  <ol type="a">
+    <li value="1">AWS Local Zones <a href="https://aws.amazon.com/about-aws/global-infrastructure/localzones/faqs/" target="new">FAQs</a></li>
+    <li>AWS Local Zones <a href="https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/" target="new">features</a></li>
+    <li>Regions, Availability Zones, and <a href="https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html" target="new">Local Zones</a></li>
+    <li>List of <a href="https://aws.amazon.com/about-aws/global-infrastructure/localzones/features/#AWS_Services" target="new">services available by AWS Local Zone</a> site</li>
+  </ol>
+</ol>	</ol>
+<ol type="i">
+  <li value="4">Points of Presence</li>
+  <ol type="1">
+    <li value="1">In AWS, the Points of Presence consists of Edge Locations and Regional Edge Caches</li>
+    <li>Edge Locations cache content closer to the end-user.</li>
+    <li>A content provider, such as a website administrator, or a streaming media service, may choose to place a copy of their content at Edge Locations, giving users near the Edge Location, low-latency access to the content.</li>
+    <li>Content providers use the AWS CloudFront service to populate Edge Locations</li>
+    <li>Regional Edge Caches are not used directly by content providers. They are considered mid-tier cache, sitting between your Origin server and the globally distributed Edge Locations. They effectively act as backups to Edge Locations.</li>
+    <li>Regional Edge Caches are fewer in number than Edge Locations, however each holds more content (has a larger cache-width) than the Edge Locations. The design is such that, if content is aged out of the Edge Location, chances are good that the content may still be available in the Regional Edge Cache, where it can be served to the customer</li>
+    <li>Origin server is the term for the original location of the content. An origin server stores the original, definitive version of your Object, before it is copied to the Edge Location. Your files, also known as objects, typically include web pages, images, and media files. It can be anything that can be served over HTTP.</li>
+    <li>If you are serving content over HTTP, your origin server is either an Amazon S3 bucket or an HTTP server, such as a web server. CloudFront gets the object from there and distributes them from the CloudFront edge locations</li>
+    <li>If previously cached content is no longer available in the Edge Location or the Regional Edge Cache, it will be copied (again) from the Origin server to repopulate the Edge Location, and Regional Edge Caches.</li>
+    <li>You specify Origin servers, like an Amazon S3 bucket or your own HTTP server, from which CloudFront gets your files which will then be distributed from CloudFront edge locations all over the world.</li>
+    <li>Your HTTP server can run on an Amazon Elastic Compute Cloud (Amazon EC2) instance or on a server that you manage; these servers are also known as custom origins.</li>
+    <li>&quot;To deliver content to end users with lower latency, Amazon CloudFront uses a global network of 310+ Points of Presence (300+ Edge locations and 13 regional mid-tier caches) in 90+ cities across 47 countries.&quot;</li>
+    <li>Edge Locations are physical sites whose main purpose is caching content, closer to the end-user. As such, it provides only a subset of AWS services, just what is needed to securely and efficiently make content available to end-users.</li>
+    <li>CloudFront distribution, tells CloudFront information about how to serve content, including origin servers, regional coverage, etc.</li>
+
+<div>
+  <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+    <tr>
+      <td><img src="images/infra/components/globalinfra001.png" width="531" height="338" alt=""></td>
+    </tr>
+  </table>
+</div>  </ol>
+<ol type="1">
+  <li value="15">CloudFront edge locations are grouped into geographic regions, which are in turn grouped into <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PriceClass.html" target="new">price classes</a>. Customers can choose a price class that includes all global list of edge locations, or a subset of  geographic regions.</li>
+  <li>A subset of services available in Edge Locations include: Amazon Route 53 (DNS queries), AWS Shield (for DDOS protection), AWS Web Application Firewall (to protect web infrastructure from common web exploits), AWS Certificate Manager (to provide custom certificates), and Lambda@Edge (to run your code closer to your end-users)</li>
+</ol>
+<ol type="1">
+  <li value="17"><strong>References:</strong></li>
+  <ol type="a">
+    <li value="1"><a href="https://aws.amazon.com/lambda/edge/" target="new">Lambda@Edge</a></li>
+	  <li>Global <a href="https://aws.amazon.com/cloudfront/features/#Global_Edge_Network" target="new">Edge Network</a></li>
+</ol>  </ol>
+</ol>
+<ol type="i">
+  <li value="5">AWS Global Network</li>
+  <ol type="1">
+    <li value="1">AWS network backbone - fully redundant, 100GbE, global private fiber </li>
+    <li>&quot;The network is built on a global, fully redundant, parallel 100 GbE metro fiber network that is linked via trans-oceanic cables across the Atlantic, Pacific, and Indian Oceans, as well as the Mediterranean, Red        Sea, and South China Seas.&quot;</li>
+    <li>&quot;A fully redundant 100GbE fiber network backbone, often providing many terabits of capacity between Regions.&quot;</li>
+    <li><strong>References:</strong></li>
+    <ol type="a">
+      <li value="1"><a href="Global%20Network">Global Network</a></li>
+      <li><a href="https://aws.amazon.com/cloudfront/features/?p=ugi&l=na&whats-new-cloudfront.sort-by=item.additionalFields.postDateTime&whats-new-cloudfront.sort-order=desc#Global_Edge_Network" target="new">Global Edge Network</a></li>
+      <li>What AWS Customer Should Know About the <a href="https://konekti.us/post/what-aws-customer-should-know-about-the-aws-global-backbone/" target="new">AWS Global Backbone</a></li>
+      <li>Introduction to <a href="https://aws.amazon.com/blogs/networking-and-content-delivery/introduction-to-network-transformation-on-aws-part-1/" target="new">Network Transformation on AWS</a> – Part 1</li>
+    </ol>
+  </ol>
+</ol>
+</ol></li>
+</ol>
+</body>
+</html>

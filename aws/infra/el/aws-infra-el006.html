@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>How does a viewer know to get content from the Edge Location, instead of the Origin?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">How does a viewer know to get content from the Edge Location, instead of the Origin?</li>
+    <em hidden="categorymeta">[AWS: Infrastructure: Edge Locations]</em>
+  <ol type="a">
+    <li value="1">TBD</li>
+    <li>It doesn't necessarily know</li>
+    <li>When you create a distribution, CloudFront assigns a domain name to the distribution, such        as d111111abcdef8.cloudfront.net. You can use this domain        name in the URLs for your content, e.g. d111111abcdef8.cloudfront.net/index.html. </li>
+    <li>The end-user accesses        CloudFront via the CloudFront Distribution        domain name.        Alternatively CloudFront can be setup to use your own domain name, e.g. <a href="#">www.example.com/index.html</a>. This name must be in DNS,        via Amazon Route53.</li>
+    <li>A viewer, or client makes a        request for the Origin server (website or application), requesting an        object. The request is sent to DNS, which responds with the nearest        CloudFront POP (Edge Location), based on latency.</li>
+    <li>From there, CloudFront        protocols take over to serve the content to the client in the most        performant manner. See the How CloudFront        delivers content        link below.</li>
+  </ol>
+  <ol type="a">
+    <li value="7"><strong>References:</strong></li>
+    <ol type="i">
+      <li value="1">How CloudFront <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/HowCloudFrontWorks.html" target="new">delivers content</a></li>
+      <li>How you set up CloudFront         to <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Introduction.html#HowCloudFrontWorksOverview" target="new">deliver content</a></li>
+      <li><a href="https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-cloudfront-distribution.html" target="new">Routing traffic</a> to an Amazon CloudFront         distribution by using your domain name</li>
+      <li>AWS CloudFront: how         requests are redirected to the Edge locations (<a href="https://stackoverflow.com/questions/49338622/awss-cloudfront-how-requests-are-redirected-the-edge-locations" target="new">StackOverflow</a>)</li>
+    </ol>
+  </ol>
+</ol>
+</body>
+</html>

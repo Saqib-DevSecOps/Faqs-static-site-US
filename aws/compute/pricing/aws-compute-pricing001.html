@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Difference between Savings Plan and Reserved Instances</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">Difference between Savings Plan and Reserved Instances
+<em hidden="categorymeta">[AWS: Compute: Pricing]</em>
+<ol type="a">
+  <li value="1">&quot;Amazon EC2 Savings       Plans enable you to reduce your compute costs by committing to a consistent amount of compute usage for a 1-year or 3-year term. This results in       savings of up to 72% over On-Demand Instance costs. Any usage up to the       commitment is charged at the discounted Savings Plan rate (for example,       $10 an hour). Any usage beyond the commitment is charged at regular       On-Demand Instance rates.</li>
+  <ol type="i">
+    <li value="1">&quot;You can use        Savings Plans to save on AWS usage in exchange for a commitment to a consistent amount of usage.&quot;</li>
+    <li>&quot;The benefit of Savings        Plans is applied to usage every hour. Any unused benefits aren't carried        over to the next hour.&quot;</li>
+    <li>Note: With Savings Plan,        even &quot;if you don't utilize qualifying services to the amount of the        commitment, you still have to pay the amount you committed to.&quot;</li>
+    <li>&quot;Savings Plans – Reduce your Amazon EC2 costs by making a commitment to a consistent amount of usage, in USD per hour, for a        term of 1 or 3 years.</li>
+    <li>Reserved Instances – Reduce your Amazon EC2 costs by making a commitment to a consistent instance configuration, including instance type        and Region, for a term of 1 or 3 years.&quot;</li>
+    <li>&quot;With Savings Plans, you make a commitment to a consistent        usage amount,        measured in USD per hour. This provides you with the flexibility to use the instance configurations that best meet your needs and        continue to save money, instead of making a        commitment to a specific instance configuration.&quot;</li>
+    <li>&quot;Committed use discounts are ideal for workloads with predictable resource        needs.&quot;</li>
+    <li>&quot;Committed Spend is the costs associated with something that has been        ordered or received but not yet paid for.&quot;</li>
+    <li>Analogy… restaurant lobster        vs fish plate…??? See 2nd TBD below…</li>
+
+   <li>The default limit        to the number of instances for EC2 Reserved Instances is 20 per Availability Zone. You can request a limit increase. There is no limit        for Savings Plan</li>
+  </ol>
+</ol>
+<div>
+<strong>Note:</strong><br>
+<ul type="disc">
+  <li>Reserved Instances are a       billing discount that is applied to the use of On-Demand Instances in your       account. You can purchase Standard Reserved and Convertible Reserved       Instances for a one-year or three-year term, and Scheduled Reserved       Instances for a one-year term. Unlike Savings Plans, Reserved Instances do not require you to commit to a consistent amount of compute usage over the       duration of the contract.</li>
+  <li>Spot Instances are ideal for       workloads with flexible start and end times or that can withstand       interruptions. Spot Instances leverage unused EC2 computing capacity and       offer you cost savings at up to 90% of On-Demand Instance prices.</li>
+  <li>Dedicated Hosts&nbsp;are physical servers with EC2       instance capacity that is fully dedicated to your use.&nbsp;<br>
+    You can use your existing per-socket, per-core, or per-VM software       licenses to help maintain license compliance. You can purchase On-Demand       Dedicated Hosts or Reserved Dedicated Hosts. Of all the Amazon EC2 options       that were covered in this course, Dedicated Hosts are the most       expensive.&quot;</li>
+	<p></p>
+</ul></div>
+<ol type="a">
+  <li value="2">AWS' committed spend discount program (Savings Plan) ??<br>
+    and AWS' committed usage discount program (Reserved Instance) ??</li>
+  <li>&quot;the primary difference       between the two programs is that Reserved Instances offer a discount against       On-Demand pricing depending on committed       utilization,       whereas Savings Plans offer a discount depending on committed spend.&quot; ??</li>
+  <li><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1"><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-capacity-reservations.html#capacity-reservations-differences" target="new">Differences</a> between Capacity Reservations, Reserved Instances, and        Savings Plans</li>
+    <li>How do I save money on my <a href="https://aws.amazon.com/premiumsupport/knowledge-center/ec2-savings-plans/" target="new">AWS usage using a Savings        Plan</a>?</li>
+    <li>What should I <a href="https://aws.amazon.com/premiumsupport/knowledge-center/savings-plans-considerations/" target="new">consider before purchasing</a> a Savings Plan?</li>
+    <li>Instance <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-purchasing-options.html" target="new">purchasing options</a></li>
+    <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-reserved-instances.html" target="new">Reserved</a> Instances</li>
+    <li>Glossary: <a href="https://www.gatekeeperhq.com/glossary/committed-spend" target="new">Committed Spend</a></li>
+    <li>Committed use discounts (<a href="https://cloud.google.com/compute/docs/instances/signing-up-committed-use-discounts" target="new">Google cloud</a>)</li>
+    <li>(TBD): What are <a href="https://docs.aws.amazon.com/savingsplans/latest/userguide/what-is-savings-plans.html" target="new">Savings Plans</a>? ***</li>
+    <li>(TBD): Comparison of Reserved        Instances vs. AWS Savings Plans (<a href="https://blogs.vmware.com/cloudhealth/reserved-instances-vs-aws-saving-plans/" target="new">VMware.com</a>)</li>
+    <li>(TBD): AWS Savings Plans: What        you need to know (<a href="https://www.prosperops.com/blog/aws-savings-plans/" target="new">Preperops.com</a>)</li>
+    <li>(TBD): Spot Instances vs.        Reserved Instances vs. Savings Plans (<a href="https://renovacloud.com/comparing-aws-pricing-models-spot-instances-vs-reserved-instances-vs-savings-plans/?lang=en" target="new">renovacloud.com</a>)</li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

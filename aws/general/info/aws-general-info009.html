@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>What is the Amazon Resource Names (ARN)?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">What is the Amazon Resource Names (ARN)?</li>
+	<em hidden="categorymeta">[AWS: General: Information, Services]</em>
+  <ol type="a">
+    <li value="1">Amazon Resource        Names (ARNs) uniquely identify AWS resources.</li>
+    <li>Customers and developers can        use ARNs to specify a resource unambiguously across AWS, including use in        IAM policies, Amazon Relational Database Service (Amazon RDS) tags, and        API calls.</li>
+    <li>An ARN can be specified in        one of the following three formats:</li>
+
+<div>
+  <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+    <tr>
+      <td>&nbsp;arn:partition:service:region:account-id:resource-id&nbsp;<br />
+        &nbsp;arn:partition:service:region:account-id:resource-type:resource-id&nbsp;<br />
+        &nbsp;arn:partition:service:region:account-id:resource-type/resource-id&nbsp;</td>
+    </tr>
+  </table>
+</div>
+	  
+	    </ol>
+
+<ol type="a">
+  <li value="4">Each ARN is composed of       several fields:</li>
+  <ol type="i">
+    <li value="1">ARN -- fixed        field with the name arn</li>
+    <li>Partition -- A partition is a group        of AWS Regions, identified by the following partition names. All        resources in an AWS account belong to one of these partitions:</li>
+    <ol type="1">
+      <li value="1">aws - AWS Regions -- Commercial. Most AWS accounts are         using the public partition. </li>
+      <li>aws-cn - China Regions -- China commercial. Used by accounts         tied to entities in China.</li>
+      <li>aws-us-gov - AWS GovCloud (US) Regions. Used by accounts tied to         US government public sector entities</li>
+    </ol>
+    <li>For completeness, there are        partitions defined for the secret and top-secret        regions:</li>
+    <ol type="1">
+      <li value="1">aws-iso - Used by the U.S. Intelligence Community (IC) to         operate workloads up to the Secret U.S. security         classification level.  </li>
+      <li>aws-iso-b - Used by the U.S. Intelligence Community (IC) to         operate workloads up to the Top Secret U.S. security         classification level. The highest security classification in the         country.</li>
+    </ol>
+    <li>Service -- The service namespace        that identifies the AWS product. I.e. the name of the service the        resource belongs to, e.g.</li>
+    <ol type="1">
+      <li value="1">s3 for Amazon S3</li>
+      <li>ec2 for Amazon Elastic Compute Cloud</li>
+    </ol>
+    <li>Region -- The Region code. I.e.        the Region the resource is located in. E.g. us-east-2        for US East (Ohio).</li>
+    <li>Account-ID -- The AWS account        identifier that owns the resource. E.g., 123456789012.</li>
+    <li>Resource-ID -- The resource identifier.        This part of the ARN can be the name or ID of the resource or a resource        path. For example, user/Bob for an IAM user or        instance/i-1234567890abcdef0 for an EC2 instance. </li>
+  </ol>
+</ol>
+<ol type="a">
+  <li value="5"><strong>References:</strong></li>
+<ol type="i">
+  <li value="1">Amazon Resource        Names (<a href="https://docs.aws.amazon.com/general/latest/gr/aws-arns-and-namespaces.html" target="new">ARNs</a>)</li>
+</ol>
+</ol></ol>
+</body>
+</html>

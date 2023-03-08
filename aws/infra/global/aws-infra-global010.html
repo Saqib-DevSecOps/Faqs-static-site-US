@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Is it possible for 2 Availability Zones to go down at the same time?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">Is it possible for 2 Availability Zones to go down at the same time?
+<em hidden="categorymeta">[AWS, Infrastructure, AWS Availability Zone]</em>
+<ol type="a">
+  <li value="1">Possible, however not       probable</li>
+  <li>Availability Zones (AZs)are a       high availability feature in AWS</li>
+  <li>Every current AWS Region has       at least 3 AZs. Depending on the business criticality, customer can choose       to deploy across two or more AZs</li>
+  <li>Also AZs are located up to       100 KM or 60 miles from each other. Chances of, for example a natural       disaster affecting two AZs at the same time are low</li>
+  <li>Organizations should design       their high-availability architectures to meet their business and mission       needs, including planning for cross-region HA if appropriate</li>
+</ol></li>
+</ol>
+</body>
+</html>

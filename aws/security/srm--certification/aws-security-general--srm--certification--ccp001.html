@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>What is the Shared Responsibility Model?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">What is the Shared Responsibility Model?
+<em hidden="categorymeta">[AWS: Security: General, Shared Responsibility Model, AWS Certification, CCP]</em>
+<ol type="a">
+  <li value="1">AWS says that, &quot;Security and compliance are shared responsibilities between AWS and the customer&quot;</li>
+  <ol type="i">
+    <li value="1">There are things in the customer layer, e.g. identity and access management, that are solely the customer's responsibility</li>
+    <li>There are things in the infrastructure layer, e.g. operating the physical data center, that are solely AWS' responsibility</li>
+    <li>There are responsibilities that apply to both the customer layer and infrastructure layer, in different contexts, such that both Customer and AWS share in the responsibility, e.g.</li>
+    <ol type="1">
+      <li value="1">Patch management, where AWS applies patches within the infrastructure, and Customer patches the <strong><em>guest operating systems</em></strong> and applications</li>
+      <li>Configuration Management where AWS maintains the configuration of its infrastructure devices, and the Customer has responsible for configuring their own guest operating systems, and applications</li>
+      <li>Awareness and Training, where AWS trains AWS employees, and customers train their own employees</li>
+    </ol>
+  </ol>
+  <li>When evaluating the security of a cloud solution, it is important for customers to understand and distinguish between the security <strong><em>of</em></strong> the cloud, and your security <strong><em>in</em></strong> the cloud.</li>
+  <ol type="i">
+    <li value="1">Security <strong><em>of</em></strong> the cloud encompasses the security measures that AWS implements and operates. </li>
+    <li>Security <strong><em>in</em></strong> the cloud encompasses the security measures that customers implement and operate, related to the AWS services they use.</li>
+  </ol>
+  <li><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">AWS <a href="https://aws.amazon.com/compliance/shared-responsibility-model/" target="new">Shared Responsibility Model</a></li>
+    <li><a href="https://aws.amazon.com/compliance/data-privacy-faq/" target="new">Data Privacy</a> FAQ</li>
+    <li><a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security.html" target="new">Security</a> in Amazon EC2</li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

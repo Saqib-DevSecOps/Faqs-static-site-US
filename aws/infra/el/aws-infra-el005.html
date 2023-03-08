@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Can I pre-populate content at the Edge Locations?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">Can I pre-populate content at the Edge Locations?
+<em hidden="categorymeta">[AWS:  Infrastructure: AWS Edge Locations]</em>
+<ol type="a">
+  <li value="1">Not that I know of</li>
+  <li>However consider if this is the right approach. I.e. why do you want to pre-populate content? Is there       a better way to meet the need?</li>
+  <li>Considerations:</li>
+  <ol type="i">
+    <li value="1">The initial        access will result in the content being pulled from the Origin server        into the Edge Location</li>
+    <li>CloudFront maintains a pool        of persistent connections to the Origin server and the communication is        over the AWS backbone, not the Internet, improving latency</li>
+    <li>If the pre-populated content        is not accessed for a specific amount of time, or if it needs to make        room for other more active content, CloudFront will automatically        de-stage inactive content</li>
+  </ol>
+  <li><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">Dynamic <a href="https://aws.amazon.com/blogs/networking-and-content-delivery/dynamic-whole-site-delivery-with-amazon-cloudfront/" target="new">Whole Site Delivery</a> with Amazon CloudFront</li>
+    <li>Improve your <a href="https://aws.amazon.com/blogs/networking-and-content-delivery/improve-your-website-performance-with-amazon-cloudfront/" target="new">website performance</a> with Amazon CloudFront</li>
+    <li>How to <a href="https://stackoverflow.com/questions/34149762/how-to-pre-warm-cloudfront-edge-servers-cache" target="new">pre-warm CloudFront</a> edge servers' cache?</li>
+    <li>Managing how long content stays in the <a href="https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/Expiration.html" target="new">cache (expiration)</a></li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

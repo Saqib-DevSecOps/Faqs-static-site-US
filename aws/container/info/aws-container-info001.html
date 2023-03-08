@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Why is it recommended to only have one process per container?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">Why is it recommended to only have one process per container?
+<em hidden="categorymeta">[AWS: Container: Technology]</em>
+<ol type="a">
+  <li value="1"><strong>Note:</strong> Docker changed their       language on this from process to concern.</li>
+  <li>&quot;It is generally       recommended that you separate areas of concern by using one service per       container.&quot;</li>
+  <li>I.e. by recommendation, a       container should have one main process.</li>
+  <li>That process may fork into       multiple processes. An example is where the Apache web server main process       would start multiple worker processes to handle incoming HTTP requests.</li>
+  <li>If you have a need to connect       multiple processes together in a solution, you can tie multiple containers       together using user-defined networks and shared volumes.</li>
+  <li>There are several reasons for       one main process per Container recommendation, including that  decoupling applications into multiple       containers makes it easier to scale horizontally and reuse containers. It       better supports a DevOps mindset where services are decoupled</li>
+  <li><strong>Note:</strong> this is a recommendation.       There are possibly edge cases that are credible exceptions</li>
+  <li><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">Run multiple        services in a container (<a href="https://docs.docker.com/config/containers/multi-service_container/" target="new">docker.com</a>) </li>
+    <li>Decouple applications (<a href="https://docs.docker.com/develop/develop-images/dockerfile_best-practices/#decouple-applications" target="new">docker.com</a>)</li>
+    <li>Why it is recommended to run        only one process in a container? (<a href="https://devops.stackexchange.com/questions/447/why-it-is-recommended-to-run-only-one-process-in-a-container" target="new">stackexchange.com</a>)</li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

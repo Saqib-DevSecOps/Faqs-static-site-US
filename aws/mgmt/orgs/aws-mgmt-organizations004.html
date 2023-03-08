@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>What's the difference between AWS Organizations OU vs IAM Group?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">What's the difference between AWS Organizations OU vs IAM Group?
+<em hidden="categorymeta">[AWS: Management: AWS Organizations,  Organizational Unit]</em>
+<ol type="a">
+  <li value="1">An <strong>IAM group</strong>       (or IAM user group) is a collection of IAM users. It is a container of one       or more IAM users and can specify permissions       for those IAM users.</li>
+  <li>An <strong>IAM user</strong>       is created by the AWS Root Account, or another IAM user. An IAM user can       be given privileges after the fact, however it starts out with no       privileges.</li>
+  <li>An <strong>IAM policy</strong>,       which grants and denies permissions, can be applied to an IAM group to       control what the IAM users in the group can do, and what resources (e.g.       Amazon EC2) they can access.</li>
+  <li>An AWS <strong>Organizational Unit</strong> (OU) is a container of accounts designed to meet your       budgetary, security, or compliance needs.</li>
+  <li>At a very basic level it is       similar to an IAM group, i.e. a collection of accounts.</li>
+  <li>However there are important       differences. An IAM group is a collection of IAM user accounts. An       Organizational Unit is a collection of AWS Root Accounts. An IAM policy       can be applied to an IAM group to control what IAM users can do. However       an IAM policy cannot be applied to an AWS Account Root.</li>
+  <li>The benefit of an       Organizational Unit (as part of the AWS Organizations service) includes:</li>
+  <ol type="i">
+    <li value="1">An ability to        implement a multi-account strategy, which is a best practice</li>
+    <li>You can group like-account        together and manage them in a seamless manner, e.g. accounts with the        same budgetary, security, or compliance needs can be placed within the        same OU and managed as a unit</li>
+    <li>It provides the business an        ability to group like accounts together, and manage them in a similar        manner</li>
+    <li>It is the only way to place        restrictions on what the AWS Root Account can do.</li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

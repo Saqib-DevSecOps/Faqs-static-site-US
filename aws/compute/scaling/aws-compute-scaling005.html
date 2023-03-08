@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>What's the difference between: simple scaling, step scaling and target tracking scaling?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">What's the difference between: simple scaling, step scaling and target tracking scaling?
+<em hidden="categorymeta">[AWS, Compute,  Auto Scaling]</em>
+<ol type="a">
+  <li value="1">Simple, Step, and Target       Tracking scaling are examples of a Dynamic Scaling policy.
+<div>
+  <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+    <tr>
+      <td><p><img src="images/compute/scaling/computescaling002.png" width="358" height="381" alt=""></p></td>
+    </tr>
+  </table>
+</div></li>
+</ol>
+<ol type="a">
+  <li value="2">&quot;A dynamic scaling       policy instructs Amazon EC2 Auto Scaling to track a specific CloudWatch       metric, and it defines what action to take when the associated CloudWatch       alarm is in ALARM.&quot;</li>
+  <li>&quot;Target tracking       scaling—Increase or decrease the current capacity of the EC2 Auto Scaling       group based on a target value for a specific metric.</li>
+  <ol type="i">
+    <li value="1">&quot;With target        tracking scaling policies, you select a <strong><em>scaling        metric</em></strong> and set a <strong><em>target value</em></strong>.
+<div>
+  <table border="1" cellpadding="0" cellspacing="0" valign="top" title="" summary="">
+    <tr>
+      <td><p><img src="images/compute/scaling/computescaling003.png" width="250" height="267" alt=""></p></td>
+      <td><p><img src="images/compute/scaling/computescaling004.png" width="246" height="268" alt=""></p>
+</td>
+      </tr>
+    </table>
+</div>
+    </li>
+
+<ol type="i">
+  <li value="2">Amazon EC2 Auto Scaling       creates and manages the CloudWatch alarms that trigger the scaling policy and calculates the scaling adjustment based on the       metric and the target value. The <strong><em>scaling policy</em></strong> adds or removes capacity       as required to keep the metric at, or close to, the specified target       value.&quot;</li>
+  <li>Target tracking works similar       to a thermostat, automatically adjusting desired capacity to keep       utilization at a constant level based on the metric and target value that       you configure.</li>
+  <ol type="1">
+    <li value="1">For example, you        can configure target tracking to keep the average CPU utilization for        your fleet of web servers at 50 percent.</li>
+    <li>Amazon EC2 Auto Scaling then        launches or terminates EC2 instances as required to keep the aggregated        CPU utilization across all servers at 50 percent</li>
+  </ol>
+</ol>  </ol></ol>
+<ol type="a">
+  <li value="4">&quot;Step scaling policies       and simple scaling policies are two of the dynamic scaling options       available for you to use.</li>
+  <ol type="i">
+    <li value="1">Both Step scaling        and Simple scaling —Increase or decrease the current capacity of the        group. Step scaling does this based on a set of scaling adjustments,        known as step adjustments, that vary based on the size of the alarm        breach. Simple scaling does this based on a single scaling adjustment.</li>
+    <li>Both require you to specify        the high and low thresholds for the alarms in Amazon CloudWatch, and then        define two scaling policies, one for scaling out (adding Instances) and        the other for scaling in (removing Instances).</li>
+    <li>Step scaling can make bigger        or smaller size adjustments based on the metric value, while simple        scaling always makes the same size adjustment. &quot;</li>
+    <li>&quot;The main issue with        simple scaling is that after a scaling activity is started, the policy        must wait for the scaling activity or health check replacement to        complete and the cooldown period to end before responding to additional        alarms.&quot;</li>
+  </ol>
+  <li>&quot;Both require you       to  alarms. Both require you to       define whether to add or remove instances, and how many, or set the group       to an exact size.&quot;</li>
+  <li>&quot;If you are scaling       based on a utilization metric that increases or decreases proportionally       to the number of instances in an Auto Scaling group, we recommend that you       use target tracking scaling policies. Otherwise, we recommend that you use       step scaling policies.&quot;</li>
+</ol>
+<ol type="a">
+  <li value="7"><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">How <a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scale-based-on-demand.html?icmpid=docs_ec2as_help_panel#as-how-scaling-policies-work">dynamic scaling policies</a> work</li>
+    <li><a href="https://docs.aws.amazon.com/autoscaling/ec2/userguide/as-scaling-simple-step.html">Step and simple scaling</a> policies for Amazon EC2        Auto Scaling</li>
+    <li>Amazon EC2 <a href="https://aws.amazon.com/ec2/autoscaling/faqs/">Auto Scaling FAQs</a></li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>What's the difference between Serverless and Fully-managed services?</title>
+</head>
+
+<body>
+<ol style="list-style-type: none">
+  <li value="1">What's the difference between Serverless and Fully-managed services?
+<em hidden="categorymeta">[AWS: Container:  Serverless, Fully-managed]</em>
+<ol type="a">
+  <li value="1">What was your honest, initial       reaction when you first heard the term Serverless computing? Like most,       including myself, you likely thought, &quot;that's not possible, is       it?&quot;</li>
+  <li>With both fully-managed and       serverless, servers are involved.</li>
+  <li>Serverless is a cloud-native       development model. It allows developers to build and run applications       without thinking about servers. With serverless computing, your       application still runs on servers, however the server infrastructure is       completely managed by AWS.</li>
+  <li>The Serverless model masks       (or abstracts) the details of the server infrastructure from the       subscribers.</li>
+  <li>Both Fully-managed and       Serverless off-load the undifferentiated heavy-lifting from the customer.</li>
+  <ol type="i">
+    <li value="1">I.e. the tedious,        often manual, yet impactful tasks, that typically doesn't involve access        to the company's intellectual property. Infrastructure related tasks such        as architecting, scaling configuring, provisioning, patching, securing,        load balancing, sharding, high-availability, etc.</li>
+    <li>These undifferentiated        heavy-lifting tasks divert resources away from a business focus.</li>
+  </ol>
+  <li>Fully-managed and Serverless       sit on a spectrum of how much input the cloud       customer has on       the server infrastructure of the services they consume.</li>
+  <ol type="i">
+    <li value="1">With serverless        computing, and in spite of the name, serverless computing involves the        use of servers. It's just that the customer has no input        on how the server infrastructure is configured, and after the        infrastructure is deployed, the customer has no access        to it. Also it is the computing model where the cloud provider is        responsible for both for managing the cloud infrastructure and the        scaling of applications.</li>
+    <li>Fully-managed service seeks customer input on configuration of the        server infrastructure, and depending on the service, may or may not have access to the server infrastructure, after deployment.</li>
+  </ol>
+  <li>One key difference between       the two is, with Fully-managed some input from the customer on how the       server environment is setup, is expected and sought. With Serverless, no       input from the customer is expected or sought.</li>
+  <li>With Serverless, the cloud provider fully manages server       infrastructure all the way up to the application layer. Fully-managed       generally stops short of the application layer.</li>
+  <li>Fully-managed vs Serverless:</li>
+  <ol type="i">
+    <li value="1">
+      <div>
+        <table border="1" cellpadding="3" cellspacing="0" valign="top" title="" summary="">
+          <tr>
+            <td><p>Description</p></td>
+            <td><p>Fully-managed</p></td>
+            <td><p>Serverless</p></td>
+          </tr>
+          <tr>
+            <td><p>Servers          involved</p></td>
+            <td><p>Yes</p></td>
+            <td><p>Yes</p></td>
+          </tr>
+          <tr>
+            <td><p>Off-loads          undifferentiated heavy-lifting to provider</p></td>
+            <td><p>Yes</p></td>
+            <td><p>Yes</p></td>
+          </tr>
+          <tr>
+            <td><p>Accepts          input on server configuration from customer</p></td>
+            <td><p>Yes</p></td>
+            <td><p>No</p></td>
+          </tr>
+          <tr>
+            <td><p>Customer can          interact with the server layer</p></td>
+            <td><p>Depends<sup><strong>*</strong></sup></p></td>
+            <td><p>No</p></td>
+          </tr>
+          <tr>
+            <td><p>Roughly          analogous to Platform-as-a-Service (PaaS)</p></td>
+            <td><p>Yes</p></td>
+            <td><p>No</p></td>
+          </tr>
+          <tr>
+            <td><p>Roughly          analogous to Software-as-a-Service (SaaS)</p></td>
+            <td><p>No</p></td>
+            <td><p>Yes</p></td>
+          </tr>
+          <tr>
+            <td><p>Example</p></td>
+            <td><p>Amazon RDS</p></td>
+            <td><p>Amazon DynamoDB</p></td>
+          </tr>
+        </table>
+      </div>
+    </li>
+
+	  <sup><strong>*</strong></sup>It depends on the service, e.g. Amazon  Elastic Beanstalk is a fully-managed service  that allows customer to access and interact with the underlying  server.<br>
+  Amazon RDS (classic) is a fully-managed service  that does not allow interactions with the server, i.e. customer has no ability  to login to the host server.
+  </ol>
+</ol><ol type="a">
+  <li value="10"><strong>References:</strong></li>
+  <ol type="i">
+    <li value="1">Build your first <a href="https://aws.amazon.com/serverless/build-a-web-app/" target="new">Serverless Web Application</a></li>
+    <li>10 Things Serverless        Architects <a href="https://aws.amazon.com/blogs/architecture/ten-things-serverless-architects-should-know/" target="new">Should Know</a></li>
+    <li>Serverless on GCP: A        comprehensive guide (<a href="https://dzone.com/articles/serverless-on-gcp" target="new">dzone.com</a>)</li>
+    <li>Google's Serverless        Offerings: Cloud Run, Cloud Functions, App Engine (<a href="https://www.splunk.com/en_us/blog/devops/gcp-serverless-comparison.html" target="new">splunk.com</a>)</li>
+  </ol>
+</ol></li>
+</ol>
+</body>
+</html>
